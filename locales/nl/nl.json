@@ -1,6 +1,146 @@
 {
-  "welcome_message": "Welkom bij Gabriel's Portfolio",
-  "search_placeholder": "Zoek inhoud...",
-  "increase_font_size": "Vergroot lettergrootte",
-  "decrease_font_size": "Verklein lettergrootte"
+  "header": {
+    "theme_toggle_button": "Schakel Donkere Modus in",
+    "search_button": {
+      "icon": "search",
+      "title": "Zoeken"
+    },
+    "font_resize_buttons": [
+      {
+        "action": "increase",
+        "title": "Vergroot lettergrootte",
+        "icon": "zoom_in"
+      },
+      {
+        "action": "decrease",
+        "title": "Verklein lettergrootte",
+        "icon": "zoom_out"
+      }
+    ],
+    "language_selector": {
+      "title": "Taal",
+      "options": [
+        {
+          "value": "en",
+          "label": "Engels"
+        },
+        {
+          "value": "nl",
+          "label": "Nederlands"
+        },
+        {
+          "value": "fr",
+          "label": "Frans"
+        }
+      ]
+    }
+  },
+  "main": {
+    "profile_section": {
+      "name": "Gabriel Aloho",
+      "title": "Cybersecurity Expert | Informatiebeveiliging | Digitale Forensische Wetenschappen",
+      "profile_picture": "images/profile.jpg"
+    },
+    "about_section": {
+      "title": "Over Mij",
+      "content": [
+        "Ik ben een professional in Informatiebeveiliging en Digitale Forensische Wetenschappen met een achtergrond in Taalkunde en Tekstanalyse.",
+        "Ik heb een Master in Informatiebeveiliging en Digitale Forensische Wetenschappen van de University of East London, voltooid in oktober 2024.",
+        "Mijn reis van Taalkunde naar Informatiebeveiliging leidde me naar specialisatie in Incidentrespons, Digitale Forensische Wetenschappen en Informatiebeveiliging.",
+        "Momenteel breid ik mijn vaardigheden uit met een cybersecurity-opleiding bij BeCode, Brussel.",
+        "Naast mijn beveiligingsexpertise lanceer ik Gue Cyber Labs, een cybersecurity-bedrijf, in januari 2025."
+      ]
+    },
+    "skills_section": {
+      "title": "Vaardigheden",
+      "skills": [
+        "Informatiebeveiliging en Digitale Forensische Wetenschappen",
+        "Netwerkontwerp en Cisco Packet Tracer",
+        "Linux Server Setup & Beheer",
+        "Python, CLI, Bash",
+        "Incidentrespons en Cybersecurity",
+        "Natuurlijke Taalverwerking (NLP)"
+      ]
+    },
+    "projects_section": {
+      "title": "Projecten",
+      "projects": [
+        {
+          "name": "Linux Server Project voor Lokale Bibliotheek",
+          "description": "Ontworpen een virtuele server en werkstation met interne netwerkconfiguraties. Geconfigureerd DHCP, DNS, Nginx, Samba, en een back-upoplossing geïmplementeerd met cron-taken. Dit project richtte zich op automatische adressering en gepartitioneerde home-directories, compleet met documentatie in Markdown-formaat.",
+          "role": "Netwerkbeheerder",
+          "github_link": "https://github.com/gabaloho/linux-server-project"
+        }
+      ]
+    },
+    "experience_section": {
+      "title": "Ervaring",
+      "experience": [
+        {
+          "job": "BeCode Cybersecurity Training (Brussel)",
+          "dates": "Oktober 2024 - Heden"
+        },
+        {
+          "job": "University of East London (Master’s in Informatiebeveiliging en Digitale Forensische Wetenschappen)",
+          "dates": "Voltooid oktober 2024"
+        }
+      ]
+    },
+    "education_section": {
+      "title": "Opleiding",
+      "education": [
+        {
+          "degree": "Master's in Informatiebeveiliging en Digitale Forensische Wetenschappen",
+          "institution": "University of East London",
+          "year": 2024
+        },
+        {
+          "degree": "Master's in Toegepaste Taalkunde en Tekstanalyse",
+          "institution": "Higher School of Economics",
+          "year": 2023
+        },
+        {
+          "degree": "Bachelor's in Taalkunde",
+          "institution": "Benue State University",
+          "year": 2012
+        }
+      ]
+    },
+    "cv_section": {
+      "title": "Download CV",
+      "description": "Klik op de onderstaande knop om mijn CV te downloaden.",
+      "cv_link": "images/CV_GabrielAloho.pdf"
+    },
+    "contact_section": {
+      "title": "Contact",
+      "email": "gabrielaloho@duck.com",
+      "form": {
+        "action": "https://formspree.io/f/manyjvbb",
+        "method": "POST",
+        "fields": [
+          {
+            "label": "Volledige Naam",
+            "type": "text",
+            "name": "name",
+            "placeholder": "Uw Volledige Naam"
+          },
+          {
+            "label": "E-mailadres",
+            "type": "email",
+            "name": "email",
+            "placeholder": "Uw E-mailadres"
+          },
+          {
+            "label": "Uw Bericht",
+            "type": "textarea",
+            "name": "message",
+            "placeholder": "Typ hier uw bericht"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "text": "&copy; 2024 Gabriel Aloho. Alle rechten voorbehouden."
+  }
 }

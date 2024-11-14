@@ -1,6 +1,76 @@
 {
-  "welcome_message": "Bienvenue sur le portfolio de Gabriel",
-  "search_placeholder": "Rechercher du contenu...",
-  "increase_font_size": "Augmenter la taille de la police",
-  "decrease_font_size": "Diminuer la taille de la police"
+  "themeToggle": "Activer le Mode Sombre",
+  "search": "Rechercher",
+  "searchPlaceholder": "Rechercher du contenu...",
+  "fontSizeIncrease": "Augmenter la taille de la police",
+  "fontSizeDecrease": "Réduire la taille de la police",
+  "language": "Langue",
+  "english": "Anglais",
+  "dutch": "Néerlandais",
+  "french": "Français",
+  "profileSection": {
+    "name": "Gabriel Aloho",
+    "description": "Expert en Cybersécurité | Sécurité de l'Information | Sciences Forensiques Numériques"
+  },
+  "aboutSection": {
+    "title": "À Propos de Moi",
+    "text": "Je suis un professionnel de la Sécurité de l'Information et des Sciences Forensiques Numériques avec une formation en Linguistique et Analyse de Texte. J'ai obtenu un Master en Sécurité de l'Information et Sciences Forensiques Numériques à l'Université de l'Est de Londres en octobre 2024. Mon parcours de la Linguistique à la Cybersécurité m'a conduit à me spécialiser dans la réponse aux incidents, les sciences forensiques numériques et la sécurité de l'information. Actuellement, je développe mes compétences avec une formation en cybersécurité chez BeCode, Bruxelles. En plus de mon expertise en sécurité, je lance Gue Cyber Labs, une entreprise de cybersécurité, en janvier 2025."
+  },
+  "skillsSection": {
+    "title": "Compétences",
+    "skills": [
+      "Sécurité de l'information et Sciences Forensiques Numériques",
+      "Conception de réseaux et Cisco Packet Tracer",
+      "Configuration et Gestion de Serveurs Linux",
+      "Python, CLI, Bash",
+      "Réponse aux Incidents et Cybersécurité",
+      "Traitement du Langage Naturel (NLP)"
+    ]
+  },
+  "projectsSection": {
+    "title": "Projets",
+    "projectList": [
+      {
+        "name": "Projet Serveur Linux pour Bibliothèque Locale",
+        "description": "Conception d'un serveur virtuel et d'un poste de travail avec des configurations réseau internes. Configuration de DHCP, DNS, Nginx, Samba et mise en place de solutions de sauvegarde avec des tâches cron. Ce projet se concentrait sur l'adressage automatique et les répertoires home partitionnés, avec une documentation complète au format Markdown.",
+        "role": "Administrateur Réseau",
+        "link": "https://github.com/gabaloho/linux-server-project"
+      }
+    ]
+  },
+  "experienceSection": {
+    "title": "Expérience",
+    "experiences": [
+      "Formation Cybersécurité BeCode (Bruxelles) - Octobre 2024 - Présent",
+      "Université de l'Est de Londres (Master en Sécurité de l'Information et Sciences Forensiques Numériques) - Terminé en octobre 2024"
+    ]
+  },
+  "educationSection": {
+    "title": "Formation",
+    "educations": [
+      "Master en Sécurité de l'Information et Sciences Forensiques Numériques, Université de l'Est de Londres, 2024",
+      "Master en Linguistique Appliquée et Analyse de Texte, Higher School of Economics, 2023",
+      "Bachelor en Linguistique, Université d'État de Benue, 2012"
+    ]
+  },
+  "cvSection": {
+    "title": "Télécharger CV",
+    "text": "Cliquez sur le bouton ci-dessous pour télécharger mon CV.",
+    "buttonText": "Télécharger le CV",
+    "link": "images/CV_GabrielAloho.pdf"
+  },
+  "contactSection": {
+    "title": "Contact",
+    "emailLabel": "Envoyez un e-mail",
+    "email": "gabrielaloho@duck.com",
+    "form": {
+      "nameLabel": "Nom Complet",
+      "emailLabel": "Adresse E-mail",
+      "messageLabel": "Votre Message",
+      "submitButton": "Envoyer le Message"
+    }
+  },
+  "footer": {
+    "text": "&copy; 2024 Gabriel Aloho. Tous droits réservés."
+  }
 }

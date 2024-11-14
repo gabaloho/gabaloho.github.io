@@ -180,56 +180,51 @@
     <footer>
         <p>&copy; 2024 Gabriel Aloho. All rights reserved.</p>
     </footer>
-
-   <!-- External JavaScript -->
-    <script src="script.js"></script>
-
-    <!-- Inline Scripts for Dynamic Functions -->
-    <!-- External JavaScript -->
-<script src="script.js"></script>
-
-<!-- Inline Scripts for Dynamic Functions -->
 <script>
-    // Load the saved language preference from localStorage when the page loads
-    window.addEventListener('load', () => {
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage) {
-            document.getElementById('language-select').value = savedLanguage;
+    // Function to fetch language content from the relevant JSON file
+    async function loadLanguageContent(language) {
+        try {
+            const response = await fetch(`/locales/${language}/${language}.json`);
+            if (!response.ok) {
+                throw new Error('Language file not found');
+            }
+            const data = await response.json();
+            updatePageContent(data); // Update page content with data
+        } catch (error) {
+            console.error('Error loading language file:', error);
         }
-    });
-
-    function searchFunction() {
-        const query = document.getElementById("search-box").value.toLowerCase();
-        const items = document.querySelectorAll(".searchable-item");
-        items.forEach(item => {
-            item.style.display = item.textContent.toLowerCase().includes(query) ? "block" : "none";
-        });
     }
 
+    // Update the page content dynamically based on JSON data
+    function updatePageContent(data) {
+        // Assuming the JSON structure matches the HTML elements that need to be updated
+        document.getElementById('about').querySelector('h2').textContent = data.about.header;
+        document.getElementById('about').querySelector('p').textContent = data.about.text;
+        document.getElementById('skills').querySelector('h2').textContent = data.skills.header;
+        document.getElementById('skills').querySelector('ul').innerHTML = data.skills.items.map(item => `<li>${item}</li>`).join('');
+        document.getElementById('projects').querySelector('h2').textContent = data.projects.header;
+        document.getElementById('projects').querySelector('.project-list').innerHTML = data.projects.list.map(project => 
+            `<div class="project">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <p><a href="${project.link}" target="_blank">Bekijk op GitHub</a></p>
+            </div>`
+        ).join('');
+        // Repeat for other sections...
+    }
+
+    // Load the saved language preference from localStorage when the page loads
+    window.addEventListener('load', () => {
+        const savedLanguage = localStorage.getItem('language') || 'en'; // Default to English
+        document.getElementById('language-select').value = savedLanguage;
+        loadLanguageContent(savedLanguage); // Load the content for the saved language
+    });
+
+    // Change language based on selection and reload content
     function changeLanguage() {
-        const selectedLanguage = document.getElementById("language-select").value;
-        let languagePage;
-
-        // Determine which HTML file to load based on selected language
-        switch (selectedLanguage) {
-            case 'en':
-                languagePage = 'index.html';
-                break;
-            case 'nl':
-                languagePage = 'index-nl.html';
-                break;
-            case 'fr':
-                languagePage = 'index-fr.html';
-                break;
-            default:
-                languagePage = 'index.html';  // Default to English if something goes wrong
-        }
-
-        // Save the selected language in localStorage so it persists on refresh
-        localStorage.setItem('language', selectedLanguage);
-
-        // Redirect to the selected language page
-        window.location.href = languagePage;
+        const selectedLanguage = document.getElementById('language-select').value;
+        localStorage.setItem('language', selectedLanguage); // Store in localStorage for persistence
+        loadLanguageContent(selectedLanguage); // Load the content for the selected language
     }
 
     function changeFontSize(action) {
