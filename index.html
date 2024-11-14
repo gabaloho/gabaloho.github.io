@@ -6,57 +6,61 @@
     <title>Gabriel Aloho | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- i18next Libraries for Multilingual Support -->
+    <script src="https://unpkg.com/i18next@21.6.16/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
 </head>
 <body>
     <!-- Theme Toggle Button -->
     <button id="theme-toggle">Toggle Dark Mode</button>
 
     <header>
-    <div class="header-actions">
-        <!-- Search Section as a Button -->
-        <div class="header-button">
-            <button id="search-button" onclick="searchFunction()" title="Search">
-                <span class="material-icons">search</span>
-            </button>
-            <input type="text" id="search-box" placeholder="Search content..." onkeyup="searchFunction()" />
-        </div>
+        <div class="header-actions">
+            <!-- Search Button and Input -->
+            <div class="header-button">
+                <button id="search-button" title="Search">
+                    <span class="material-icons">search</span>
+                </button>
+                <input type="text" id="search-box" placeholder="Search content..." onkeyup="searchFunction()" />
+            </div>
 
-        <!-- Accessibility Section as Buttons -->
-        <div class="header-button">
-            <button onclick="changeFontSize('increase')" title="Increase Font Size">
-                <span class="material-icons">zoom_in</span>
-            </button>
-            <button onclick="changeFontSize('decrease')" title="Decrease Font Size">
-                <span class="material-icons">zoom_out</span>
-            </button>
-        </div>
+            <!-- Accessibility: Font Resize -->
+            <div class="header-button">
+                <button onclick="changeFontSize('increase')" title="Increase Font Size">
+                    <span class="material-icons">zoom_in</span>
+                </button>
+                <button onclick="changeFontSize('decrease')" title="Decrease Font Size">
+                    <span class="material-icons">zoom_out</span>
+                </button>
+            </div>
 
-        <!-- Language Section as a Button -->
-        <div class="header-button">
-            <button title="Language">
-                <span class="material-icons">translate</span>
-            </button>
-            <select id="language-select" onchange="changeLanguage()">
-                <option value="en">English</option>
-                <option value="nl">Nederlands</option>
-                <option value="fr">Français</option>
-            </select>
+            <!-- Language Selector -->
+            <div class="header-button">
+                <button title="Language">
+                    <span class="material-icons">translate</span>
+                </button>
+                <select id="language-select" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="nl">Nederlands</option>
+    <option value="fr">Français</option>
+</select>
+
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
 
     <main>
-    <!-- Profile Section -->
-    <div class="header-content">
-        <img src="images/profile.jpg" alt="Gabriel Aloho" class="profile-pic">
-        <div class="header-text">
-            <h1>Gabriel Aloho</h1>
-            <p>Cybersecurity Expert | Information Security | Digital Forensics</p>
-        </div>
-    </div>
-</main>
-
+        <!-- Profile Section -->
+        <section class="header-content">
+            <img src="images/profile.jpg" alt="Gabriel Aloho" class="profile-pic">
+            <div class="header-text">
+                <h1>Gabriel Aloho</h1>
+                <p>Cybersecurity Expert | Information Security | Digital Forensics</p>
+            </div>
+        </section>
 
         <!-- About Section -->
         <section id="about">
@@ -66,8 +70,10 @@
         </section>
 
         <!-- Skills Section -->
+         
         <section id="skills">
             <h2><span class="material-icons">work</span> Skills</h2>
+            
             <ul>
                 <li>Information Security and Digital Forensics</li>
                 <li>Network Design and Cisco Packet Tracer</li>
@@ -175,35 +181,68 @@
         <p>&copy; 2024 Gabriel Aloho. All rights reserved.</p>
     </footer>
 
+   <!-- External JavaScript -->
     <script src="script.js"></script>
 
-    <!-- Scripts for Theme, Language, Search, and Font Size -->
-    <script>
-        function searchFunction() {
-            const query = document.getElementById("search-box").value.toLowerCase();
-            const items = document.querySelectorAll(".searchable-item");
-            items.forEach(item => {
-                item.style.display = item.textContent.toLowerCase().includes(query) ? "block" : "none";
-            });
-        }
+    <!-- Inline Scripts for Dynamic Functions -->
+    <!-- External JavaScript -->
+<script src="script.js"></script>
 
-        function changeLanguage() {
-            const selectedLanguage = document.getElementById("language-select").value;
-            // Here, handle the dynamic content change based on selected language
-            alert("Language changed to: " + selectedLanguage);
+<!-- Inline Scripts for Dynamic Functions -->
+<script>
+    // Load the saved language preference from localStorage when the page loads
+    window.addEventListener('load', () => {
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+            document.getElementById('language-select').value = savedLanguage;
         }
+    });
 
-        function changeFontSize(action) {
-            const body = document.body;
-            const currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
-            const newFontSize = action === 'increase' ? currentFontSize * 1.1 : currentFontSize / 1.1;
-            body.style.fontSize = newFontSize + 'px';
-        }
-
-        // Toggle Dark Mode
-        document.getElementById('theme-toggle').addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
+    function searchFunction() {
+        const query = document.getElementById("search-box").value.toLowerCase();
+        const items = document.querySelectorAll(".searchable-item");
+        items.forEach(item => {
+            item.style.display = item.textContent.toLowerCase().includes(query) ? "block" : "none";
         });
-    </script>
+    }
+
+    function changeLanguage() {
+        const selectedLanguage = document.getElementById("language-select").value;
+        let languagePage;
+
+        // Determine which HTML file to load based on selected language
+        switch (selectedLanguage) {
+            case 'en':
+                languagePage = 'index.html';
+                break;
+            case 'nl':
+                languagePage = 'index-nl.html';
+                break;
+            case 'fr':
+                languagePage = 'index-fr.html';
+                break;
+            default:
+                languagePage = 'index.html';  // Default to English if something goes wrong
+        }
+
+        // Save the selected language in localStorage so it persists on refresh
+        localStorage.setItem('language', selectedLanguage);
+
+        // Redirect to the selected language page
+        window.location.href = languagePage;
+    }
+
+    function changeFontSize(action) {
+        const body = document.body;
+        const currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
+        const newFontSize = action === 'increase' ? currentFontSize * 1.1 : currentFontSize / 1.1;
+        body.style.fontSize = newFontSize + 'px';
+    }
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+    });
+</script>
+
 </body>
 </html>

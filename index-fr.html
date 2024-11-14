@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Aloho | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- i18next Libraries for Multilingual Support -->
+    <script src="https://unpkg.com/i18next@21.6.16/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle">Activer le Mode Sombre</button>
+
+    <header>
+        <div class="header-actions">
+            <!-- Search Button and Input -->
+            <div class="header-button">
+                <button id="search-button" title="Rechercher">
+                    <span class="material-icons">search</span>
+                </button>
+                <input type="text" id="search-box" placeholder="Rechercher du contenu..." onkeyup="searchFunction()" />
+            </div>
+
+            <!-- Accessibility: Font Resize -->
+            <div class="header-button">
+                <button onclick="changeFontSize('increase')" title="Augmenter la taille de la police">
+                    <span class="material-icons">zoom_in</span>
+                </button>
+                <button onclick="changeFontSize('decrease')" title="Réduire la taille de la police">
+                    <span class="material-icons">zoom_out</span>
+                </button>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="header-button">
+                <button title="Langue">
+                    <span class="material-icons">translate</span>
+                </button>
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="en">Anglais</option>
+                    <option value="nl">Néerlandais</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Profile Section -->
+        <section class="header-content">
+            <img src="images/profile.jpg" alt="Gabriel Aloho" class="profile-pic">
+            <div class="header-text">
+                <h1>Gabriel Aloho</h1>
+                <p>Expert en Cybersécurité | Sécurité de l'Information | Sciences Forensiques Numériques</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2><span class="material-icons">person</span> À Propos de Moi</h2>
+            <p>Je suis un professionnel de la Sécurité de l'Information et des Sciences Forensiques Numériques avec une formation en Linguistique et Analyse de Texte. J'ai obtenu un Master en Sécurité de l'Information et Sciences Forensiques Numériques à l'Université de l'Est de Londres en octobre 2024. Mon parcours de la Linguistique à la Cybersécurité m'a conduit à me spécialiser dans la réponse aux incidents, les sciences forensiques numériques et la sécurité de l'information. Actuellement, je développe mes compétences avec une formation en cybersécurité chez BeCode, Bruxelles.</p>
+            <p>En plus de mon expertise en sécurité, je lance Gue Cyber Labs, une entreprise de cybersécurité, en janvier 2025.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2><span class="material-icons">work</span> Compétences</h2>
+            <ul>
+                <li>Sécurité de l'information et Sciences Forensiques Numériques</li>
+                <li>Conception de réseaux et Cisco Packet Tracer</li>
+                <li>Configuration et Gestion de Serveurs Linux</li>
+                <li>Python, CLI, Bash</li>
+                <li>Réponse aux Incidents et Cybersécurité</li>
+                <li>Traitement du Langage Naturel (NLP)</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2><span class="material-icons">developer_mode</span> Projets</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>Projet Serveur Linux pour Bibliothèque Locale</h3>
+                    <p>Conception d'un serveur virtuel et d'un poste de travail avec des configurations réseau internes. Configuration de DHCP, DNS, Nginx, Samba et mise en place de solutions de sauvegarde avec des tâches cron. Ce projet se concentrait sur l'adressage automatique et les répertoires home partitionnés, avec une documentation complète au format Markdown.</p>
+                    <p>Rôle: Administrateur Réseau</p>
+                    <p><a href="https://github.com/gabaloho/linux-server-project" target="_blank">Voir sur GitHub</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2><span class="material-icons">work_outline</span> Expérience</h2>
+            <ul>
+                <li><strong>Formation Cybersécurité BeCode (Bruxelles) - </strong>Octobre 2024 - Présent</li>
+                <li><strong>Université de l'Est de Londres (Master en Sécurité de l'Information et Sciences Forensiques Numériques) - </strong>Terminé en octobre 2024</li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2><span class="material-icons">school</span> Formation</h2>
+            <ul>
+                <li>Master en Sécurité de l'Information et Sciences Forensiques Numériques, Université de l'Est de Londres, 2024</li>
+                <li>Master en Linguistique Appliquée et Analyse de Texte, Higher School of Economics, 2023</li>
+                <li>Bachelor en Linguistique, Université d'État de Benue, 2012</li>
+            </ul>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv">
+            <h2><span class="material-icons">download</span> Télécharger CV</h2>
+            <p>Cliquez sur le bouton ci-dessous pour télécharger mon CV.</p>
+            <a href="images/CV_GabrielAloho.pdf" download="CV_GabrielAloho" class="cv-button">
+                <button>Télécharger le CV</button>
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2><span class="material-icons">email</span> Contact</h2>
+            <p><span class="material-icons">send</span> Envoyez un e-mail <a href="mailto:gabrielaloho@duck.com" id="email">gabrielaloho@duck.com</a></p>
+
+            <form action="https://formspree.io/f/manyjvbb" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom Complet</label>
+                    <input type="text" id="name" name="name" placeholder="Votre Nom Complet" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Votre Adresse E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tapez votre message ici" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer le Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gabriel Aloho. Tous droits réservés.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

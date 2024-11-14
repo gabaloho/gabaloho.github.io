@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Aloho | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- i18next Libraries for Multilingual Support -->
+    <script src="https://unpkg.com/i18next@21.6.16/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle">Schakel Donkere Modus in</button>
+
+    <header>
+        <div class="header-actions">
+            <!-- Search Button and Input -->
+            <div class="header-button">
+                <button id="search-button" title="Zoeken">
+                    <span class="material-icons">search</span>
+                </button>
+                <input type="text" id="search-box" placeholder="Zoek inhoud..." onkeyup="searchFunction()" />
+            </div>
+
+            <!-- Accessibility: Font Resize -->
+            <div class="header-button">
+                <button onclick="changeFontSize('increase')" title="Vergroot lettergrootte">
+                    <span class="material-icons">zoom_in</span>
+                </button>
+                <button onclick="changeFontSize('decrease')" title="Verklein lettergrootte">
+                    <span class="material-icons">zoom_out</span>
+                </button>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="header-button">
+                <button title="Taal">
+                    <span class="material-icons">translate</span>
+                </button>
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="en">Engels</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="fr">Frans</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Profile Section -->
+        <section class="header-content">
+            <img src="images/profile.jpg" alt="Gabriel Aloho" class="profile-pic">
+            <div class="header-text">
+                <h1>Gabriel Aloho</h1>
+                <p>Cybersecurity Expert | Informatiebeveiliging | Digitale Forensische Wetenschappen</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2><span class="material-icons">person</span> Over Mij</h2>
+            <p>Ik ben een professional in Informatiebeveiliging en Digitale Forensische Wetenschappen met een achtergrond in Taalkunde en Tekstanalyse. Ik heb een Master in Informatiebeveiliging en Digitale Forensische Wetenschappen van de University of East London, voltooid in oktober 2024. Mijn reis van Taalkunde naar Informatiebeveiliging leidde me naar specialisatie in Incidentrespons, Digitale Forensische Wetenschappen en Informatiebeveiliging. Momenteel breid ik mijn vaardigheden uit met een cybersecurity-opleiding bij BeCode, Brussel.</p>
+            <p>Naast mijn beveiligingsexpertise lanceer ik Gue Cyber Labs, een cybersecurity-bedrijf, in januari 2025.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2><span class="material-icons">work</span> Vaardigheden</h2>
+            <ul>
+                <li>Informatiebeveiliging en Digitale Forensische Wetenschappen</li>
+                <li>Netwerkontwerp en Cisco Packet Tracer</li>
+                <li>Linux Server Setup & Beheer</li>
+                <li>Python, CLI, Bash</li>
+                <li>Incidentrespons en Cybersecurity</li>
+                <li>Natuurlijke Taalverwerking (NLP)</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2><span class="material-icons">developer_mode</span> Projecten</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>Linux Server Project voor Lokale Bibliotheek</h3>
+                    <p>Ontworpen een virtuele server en werkstation met interne netwerkconfiguraties. Geconfigureerd DHCP, DNS, Nginx, Samba, en een back-upoplossing geïmplementeerd met cron-taken. Dit project richtte zich op automatische adressering en gepartitioneerde home-directories, compleet met documentatie in Markdown-formaat.</p>
+                    <p>Rol: Netwerkbeheerder</p>
+                    <p><a href="https://github.com/gabaloho/linux-server-project" target="_blank">Bekijk op GitHub</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2><span class="material-icons">work_outline</span> Ervaring</h2>
+            <ul>
+                <li><strong>BeCode Cybersecurity Training (Brussel) - </strong>Oktober 2024 - Heden</li>
+                <li><strong>University of East London (Master’s in Informatiebeveiliging en Digitale Forensische Wetenschappen) - </strong>Voltooid oktober 2024</li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2><span class="material-icons">school</span> Opleiding</h2>
+            <ul>
+                <li>Master's in Informatiebeveiliging en Digitale Forensische Wetenschappen, University of East London, 2024</li>
+                <li>Master's in Toegepaste Taalkunde en Tekstanalyse, Higher School of Economics, 2023</li>
+                <li>Bachelor's in Taalkunde, Benue State University, 2012</li>
+            </ul>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv">
+            <h2><span class="material-icons">download</span> Download CV</h2>
+            <p>Klik op de onderstaande knop om mijn CV te downloaden.</p>
+            <a href="images/CV_GabrielAloho.pdf" download="CV_GabrielAloho" class="cv-button">
+                <button>Download CV</button>
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2><span class="material-icons">email</span> Contact</h2>
+            <p><span class="material-icons">send</span> Stuur een e-mail <a href="mailto:gabrielaloho@duck.com" id="email">gabrielaloho@duck.com</a></p>
+
+            <form action="https://formspree.io/f/manyjvbb" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Volledige Naam</label>
+                    <input type="text" id="name" name="name" placeholder="Uw Volledige Naam" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mailadres</label>
+                    <input type="email" id="email" name="email" placeholder="Uw E-mailadres" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Uw Bericht</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Typ hier uw bericht" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Bericht Verzenden</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gabriel Aloho. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
