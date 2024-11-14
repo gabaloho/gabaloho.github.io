@@ -1,0 +1,329 @@
+/* Default Light Mode Styles */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f0f0f0;
+    --link-color: #007acc;
+    --footer-bg: #f1f1f1;
+    --list-text-color: #333333;
+    --button-bg: #007acc;
+    --button-hover-bg: #005f99;
+    --input-border: #ccc;
+    --input-focus-border: var(--link-color);
+    --form-bg: var(--bg-color);
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --header-bg: #222222;
+    --link-color: #4fa3f7;
+    --footer-bg: #222222;
+    --list-text-color: #000000;
+    --button-bg: #4fa3f7;
+    --button-hover-bg: #2d84d7;
+    --input-border: #444;
+    --input-focus-border: var(--link-color);
+    --form-bg: #333;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+}
+/* Header Section */
+header {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    padding: 10px 20px; /* Reduced padding for smaller header */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 120px; /* Ensure header has a minimum height */
+}
+
+header h1 {
+    font-size: 2em;  /* Reduced font size for the header */
+    margin: 5px 0;
+}
+
+header p {
+    font-size: 1.1em;  /* Reduced font size for the subtitle */
+    margin: 5px 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-pic {
+    display: block;
+    width: 150px; /* Adjusted size of the profile picture */
+    height: 150px; /* Ensure the height is the same as the width */
+    margin: 10px auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-text h1 {
+    font-size: 2em;  /* Adjusted font size */
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.header-text p {
+    font-size: 1.1em; /* Adjusted font size */
+    margin-top: 5px;
+    color: var(--text-color);
+}
+
+/* Profile Section */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text below the picture */
+}
+
+.profile-pic {
+    display: block;
+    width: 200px;  /* Increased size of the profile picture */
+    height: 200px; /* Ensure the height is the same as the width to maintain the circle shape */
+    margin: 0 auto 10px; /* Add margin below the image */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fits nicely within the circle */
+    border: 5px solid var(--bg-color); /* Add a border that matches the background to blend it */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Subtle shadow for a floating effect */
+}
+
+/* Profile text styles */
+.header-text h1 {
+    font-size: 2.5em; /* Increased size of the name */
+    margin: 0;
+    color: var(--text-color); /* Ensure text color is set based on theme */
+}
+
+.header-text p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: var(--text-color); /* Ensure text color is set based on theme */
+}
+
+
+/* Section Styles */
+section {
+    margin: 20px;
+    padding: 20px;
+    background: var(--bg-color);
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+h2 {
+    color: var(--text-color);
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Skills & Projects */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--list-text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Optional: Style for the toggle button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--button-bg);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Contact Form Styles */
+#contact form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--form-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1em;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: border 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: var(--input-focus-border);
+    outline: none;
+}
+
+#contact form button {
+    padding: 12px 20px;
+    background-color: var(--button-bg);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#contact form button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* CV Download Button Styles */
+.cv-button button {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Search Section */
+#search {
+    background-color: var(--bg-color);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#search input {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--input-border);
+}
+
+/* Accessibility Section */
+#accessibility {
+    margin-top: 30px;
+}
+
+#accessibility button {
+    background-color: #008CBA;
+}
+
+#accessibility button:hover {
+    background-color: #007B9A;
+}
+
+/* Language Section */
+#languages select {
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--input-border);
+    margin-top: 10px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .header-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Improved Layout for Header and Content */
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
