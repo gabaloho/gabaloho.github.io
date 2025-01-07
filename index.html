@@ -4,347 +4,403 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Aloho | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to external stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- i18next Libraries for Multilingual Support -->
-    <script src="https://unpkg.com/i18next@21.6.16/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/i18nextBrowserLanguageDetector.min.js"></script>
-    <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Materialize JS (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        body.light-mode {
+            background-color: white;
+            color: black;
+        }
+        body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+        .hero-section.light-mode {
+            background-color: #1565c0; /* blue darken-3 */
+            color: white;
+        }
+        .hero-section.dark-mode {
+            background-color: black !important; /* grey darken-3 */
+            color: white;
+        }
+    </style>
 </head>
-<body>
-    <!-- Theme Toggle Button -->
-    <button id="theme-toggle">Toggle Dark Mode</button>
 
+<body class="light-mode">
     <header>
-        <div class="header-actions">
-            <!-- Search Button and Input -->
-            <div class="header-button">
-                <button id="search-button" title="Search">
-                    <span class="material-icons">search</span>
-                </button>
-                <input type="text" id="search-box" placeholder="Search content..." onkeyup="searchFunction()" />
+        <nav class="blue darken-3">
+            <div class="nav-wrapper container">
+                <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="btn-flat white-text" style="margin-right: 10px;">
+            <i class="material-icons">brightness_4</i>
+            </button>
+            
             </div>
-
-            <!-- Accessibility: Font Resize -->
-            <div class="header-button">
-                <button onclick="changeFontSize('increase')" title="Increase Font Size">
-                    <span class="material-icons">zoom_in</span>
-                </button>
-                <button onclick="changeFontSize('decrease')" title="Decrease Font Size">
-                    <span class="material-icons">zoom_out</span>
-                </button>
-            </div>
-
-            <!-- Language Selector -->
-            <div class="header-button">
-                <button title="Language">
-                    <span class="material-icons">translate</span>
-                </button>
-                <select id="language-select" onchange="changeLanguage()">
-    <option value="en">English</option>
-    <option value="nl">Nederlands</option>
-    <option value="fr">Français</option>
-</select>
-
-            </div>
-        </div>
+        </nav>
+        <!-- Theme Toggle Button -->
+        <!-- Sidenav -->
+        <ul class="sidenav" id="mobile-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </header>
 
-
-    <main>
-<!-- Profile Section -->
-<section class="header-content section">
+<!-- Hero Section -->
+<div class="section hero-section blue darken-3 white-text center valign-wrapper" style="height: 70vh;">
     <div class="container">
         <div class="row">
-            <div class="col s12 m4">
-                <img src="images/profile.jpg" alt="Gabriel Aloho" class="profile-pic circle responsive-img">
+            <!-- Profile Image -->
+            <div class="col s12 m4 center-align">
+                <img src="images/profile.jpg" alt="Gabriel Aloho" class="circle responsive-img z-depth-2" 
+                     style="width: 200px; height: 200px; object-fit: cover;">
             </div>
+            <!-- Name and Bio -->
             <div class="col s12 m8">
-                <div class="header-text">
-                    <h1 class="blue-text text-darken-4">Gabriel Aloho</h1>
-                    <p class="grey-text text-darken-2">Cybersecurity Expert | Information Security | Digital Forensics</p>
-                </div>
-            </div>
+        <h1 class="flow-text" style="font-size: 3rem; font-weight: bold;">Gabriel Aloho</h1>
+        <p class="flow-text" style="font-size: 1.5rem; margin-top: 10px;">
+        Cybersecurity Expert | Ethical Hacking | Digital Forensics | Software Engineering | Risk Management | 
+        Technical Training & Leadership
+         </p>
         </div>
-    </div>
-</section>
+
+</div>
+</div>
+</div>
 
 <!-- About Section -->
-<section id="about" class="section">
+<div id="about" class="section">
     <div class="container">
-        <h2 class="blue-text text-darken-4"><span class="material-icons left">person</span> About Me</h2>
-        <p>I am a seasoned cybersecurity professional specializing in Information Security, Digital Forensics, and Incident Response, with a strong foundation in Linguistics and Text Analytics. My expertise stems from a diverse academic background and hands-on experience gained from leading various cybersecurity workshops, including for Nigeria Police and UBEC staff. I leverage my skills in ethical hacking, penetration testing, and security assessments to help organizations identify vulnerabilities and strengthen their defenses.</p>
-
-        <p>In addition to my cybersecurity work, I have extensive experience in web development, having delivered multiple security-focused website projects for clients, including the development of secure platforms, WordPress overhauls, and ongoing monitoring and support. I also have a deep understanding of network security and Linux server management, ensuring systems are resilient against cyber threats.</p>
-
-        <p>I hold a Master's degree in Information Security and Digital Forensics from the University of East London, completed in October 2024. Additionally, I am actively expanding my knowledge through a Cybersecurity training program at BeCode, Brussels. My passion for staying at the forefront of cybersecurity trends drives my commitment to ongoing learning and professional development.</p>
-
-        <p>Beyond my technical expertise, I possess strong soft skills, including leadership, problem-solving, and communication, which have allowed me to successfully manage client projects, conduct training, and collaborate with cross-functional teams. I am also launching Gue Cyber Labs, a new cybersecurity venture, in January 2025.</p>
+        <h2 class="blue-text text-darken-3"><i class="material-icons left">person</i> About Me</h2>
+        <p class="flow-text">I am a seasoned cybersecurity professional with expertise in Information Security, Digital Forensics, and Incident Response, complemented by a background in Linguistics and Text Analytics. I have led impactful workshops for organizations like the Nigeria Police and UBEC, specializing in ethical hacking, penetration testing, and security assessments to help businesses strengthen their defenses. Alongside cybersecurity, I have significant experience in web development, delivering security-focused website projects, WordPress overhauls, and ongoing support. Holding a Master’s degree in Information Security and Digital Forensics from the University of East London and currently expanding my knowledge through a Cybersecurity training program at BeCode in Brussels, I am passionate about staying ahead of cybersecurity trends. With strong leadership and communication skills, I manage client projects and cross-functional teams effectively, and in January 2025, I will be launching Gue Cyber Labs, my new cybersecurity venture.</p>
+       <a href="#contact"><button class="btn waves-effect waves-light">Contact Me</button></a>
     </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="section">
-    <div class="container">
-        <h2 class="blue-text text-darken-4"><span class="material-icons left">work</span> Skills</h2>
-        
-        <h3 class="blue-text text-darken-2">Technical Skills</h3>
-        <ul class="collection">
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Information Security and Digital Forensics</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Network Design and Cisco Packet Tracer</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Linux Server Setup & Management</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Python, CLI, Bash</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Incident Response and Cybersecurity</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Natural Language Processing (NLP)</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Web Development & Security (WordPress, HTML/CSS, JS)</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Security Assessment & Penetration Testing</li>
-        </ul>
-
-        <h3 class="blue-text text-darken-2">Soft Skills</h3>
-        <ul class="collection">
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Leadership: Led workshops and training sessions for large teams, including Nigerian Police and UBEC staff.</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Communication: Delivered complex cybersecurity concepts in accessible ways, ensuring clarity and engagement.</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Problem-Solving: Delivered custom-tailored solutions for client websites, optimizing performance and security.</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Collaboration: Worked alongside diverse teams, such as Sandtech Cons Multi-concept Ltd and Well Spring Consulting.</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Project Management: Managed and delivered projects on time, including WordPress overhauls and hosting support.</li>
-            <li class="collection-item"><i class="material-icons left">check_circle</i> Adaptability: Quickly adapted to new client environments, providing ongoing platform support for projects like HOREMOW and eco.com.ng.</li>
-        </ul>
-    </div>
-</section>
+</div>
 
 
 
-        <!-- Projects Section -->
-<section id="projects">
-    <h2><span class="material-icons">developer_mode</span> Projects</h2>
-    <div class="project-list">
-        <!-- Cybersecurity Projects -->
-        <div class="project">
-            <h3>Technical and Open Source Intelligence Workshops for the Nigerian Police</h3>
-            <p>Conducted two workshops (Enugu and Kaduna) on Technical and Open Source Intelligence in collaboration with Sandtech Cons Multi-concept Ltd. Delivered hands-on training in cybersecurity techniques to enhance the Nigerian Police's capabilities in digital investigations.</p>
-            <p>Role: Lead Cybersecurity Instructor</p>
-            <p><a href="https://github.com/gabaloho/nigerian-police-workshops" target="_blank">View on GitHub</a></p>
-        </div>
-
-        <div class="project">
-            <h3>Ethical Hacking Training for UBEC</h3>
-            <p>Organized and delivered a hands-on training on ethical hacking and penetration testing for UBEC staff. This training focused on equipping them with the skills needed to assess and strengthen their organization's cybersecurity posture.</p>
-            <p>Role: Lead Cybersecurity Instructor</p>
-            <p><a href="https://github.com/gabaloho/ethical-hacking-ubec" target="_blank">View on GitHub</a></p>
-        </div>
-
-        <div class="project">
-            <h3>ISC2 CC Training</h3>
-            <p>Designed and conducted a comprehensive six-week ISC2 Certified in Cybersecurity (CC) training course for 30 students, organized by Well Spring Consulting. The course covered critical concepts in cybersecurity to prepare participants for certification.</p>
-            <p>Role: Lead Cybersecurity Instructor</p>
-            <p><a href="https://github.com/gabaloho/isc2-cc-training" target="_blank">View on GitHub</a></p>
-        </div>
-
-        <!-- Software Development Projects -->
-        <div class="project">
-            <h3>eloheemsuites.com</h3>
-            <p>Full-scale development, security implementations, hosting, continuous monitoring, and user training for <a href="https://eloheemsuites.com" target="_blank">eloheemsuites.com</a>. Ongoing project since 2023.</p>
-            <p>Role: Lead Engineer</p>
-            <p><a href="https://eloheemsuites.com" target="_blank">View Project</a></p>
-        </div>
-
-        <div class="project">
-            <h3>thebig.com.ng</h3>
-            <p>Custom-built website with enterprise-grade security, monitoring solutions, and continuous enhancements for <a href="https://thebig.com.ng" target="_blank">thebig.com.ng</a>. Ongoing project since 2024.</p>
-            <p>Role: Lead Engineer</p>
-            <p><a href="https://thebig.com.ng" target="_blank">View Project</a></p>
-        </div>
-
-        <div class="project">
-            <h3>HOREMOW Europe and North America Platforms</h3>
-            <p>Delivered extensive WordPress overhauls, performance optimizations, and ongoing platform support for HOREMOW Europe and North America. The project included end-to-end website management, from development to continuous updates until 2024 when clients employed in-house teams.</p>
-            <p>Role: Lead Engineer</p>
-            <p><a href="https://www.horemoweurope.org" target="_blank">View HOREMOW Europe</a> | <a href="https://www.horemowna.org" target="_blank">View HOREMOW North America</a></p>
-        </div>
-
-        <!-- Web Development & Hosting Projects -->
-        <div class="project">
-            <h3>eco.com.ng</h3>
-            <p>Designed and developed a secure platform, implemented robust monitoring tools, and provided continuous maintenance for <a href="https://eco.com.ng" target="_blank">eco.com.ng</a>. Ongoing project since 2023.</p>
-            <p>Role: Lead Engineer & Cybersecurity Consultant</p>
-            <p><a href="https://eco.com.ng" target="_blank">View Project</a></p>
-        </div>
-
-        <div class="project">
-            <h3>eyahshotel.com</h3>
-            <p>Developed and hosted the platform with a focus on security, user training, and regular updates for <a href="https://eyahshotel.com" target="_blank">eyahshotel.com</a>. Ongoing project since 2023.</p>
-            <p>Role: Lead Engineer</p>
-            <p><a href="https://eyahshotel.com" target="_blank">View Project</a></p>
-        </div>
-
-        <div class="project">
-            <h3>shadebuy.com</h3>
-            <p>Designed and hosted a professional e-commerce website with basic security and monitoring for <a href="https://shadebuy.com" target="_blank">shadebuy.com</a>. Discontinued project in 2024.</p>
-            <p>Role: Lead Engineer & Cybersecurity Consultant</p>
-            <p><a href="https://shadebuy.com" target="_blank">View Project</a></p>
-        </div>
-
-        <div class="project">
-            <h3>voiceofpraiseone.com</h3>
-            <p>Developed and hosted the platform with integrated domain and security configurations for <a href="https://voiceofpraiseone.com" target="_blank">voiceofpraiseone.com</a>. Discontinued project in 2024.</p>
-            <p>Role: Lead Engineer</p>
-            <p><a href="https://voiceofpraiseone.com" target="_blank">View Project</a></p>
-        </div>
-
-        <div class="project">
-            <h3>Seed Builders Foundation</h3>
-            <p>Strategic consulting for WordPress setup and backend configuration, handed over to the company’s IT team in 2021. For more information, visit <a href="https://seedbuildersfoundation.org" target="_blank">seedbuildersfoundation.org</a>.</p>
-            <p>Role: Consultant</p>
-            <p><a href="https://seedbuildersfoundation.org" target="_blank">View Project</a></p>
-        </div>
-
-        <div class="project">
-            <h3>Seed Builders NG</h3>
-            <p>Expert backend configurations, hosting, and maintenance services for <a href="https://seedbuildersng.com" target="_blank">seedbuildersng.com</a>, handed over to the company’s IT team in 2021.</p>
-            <p>Role: Consultant</p>
-            <p><a href="https://seedbuildersng.com" target="_blank">View Project</a></p>
-        </div>
-    </div>
-</section>
-
-
-  <section id="certifications" class="section">
-    <div class="container">
-        <h2 class="blue-text text-darken-4"><span class="material-icons left">verified_user</span> Certifications & Courses</h2>
-        <ul>
-            <li><strong>Certified Ethical Hacker (CEH) Practical - </strong>EC-Council</li>
-            <li><strong>Introduction to Ethical Hacking - </strong>Codecademy</li>
-            <li><strong>Programming Foundations: Web Security - </strong>LinkedIn</li>
-            <li><strong>Learning Computer Security and Internet Safety - </strong>LinkedIn</li>
-            <li><strong>Introduction to Linux - </strong>LinkedIn</li>
-            <li><strong>Linux: Overview and Installation - </strong>LinkedIn</li>
-            <li><strong>Programming Foundations: Algorithms - </strong>LinkedIn</li>
-            <li><strong>Programming Foundations: Design Patterns - </strong>LinkedIn</li>
-            <li><strong>Introduction to Python: Master Python Basics - </strong>BitDegree</li>
-            <li><strong>Computer Programming for Everyone - </strong>FutureLearn</li>
-            <li><strong>Learn to Code for the Web - </strong>University of Leeds</li>
-            <li><strong>Frontend Fundamentals - </strong>Pirple</li>
-            <li><strong>Getting Your First Job in Software Development - </strong>LinkedIn</li>
-            <li><strong>Programming Foundations: Fundamentals - </strong>LinkedIn</li>
-            <li><strong>Programming Foundations: Beyond the Fundamentals - </strong>LinkedIn</li>
-            <li><strong>Programming Foundations: Object-Oriented Design - </strong>LinkedIn</li>
-        </ul>
-    </div>
-</section>
-
-       <!-- Education Section -->
+<!-- Education Section -->
 <section id="education" class="section">
     <div class="container">
-        <h2 class="blue-text text-darken-4"><span class="material-icons left">school</span> Education</h2>
-        <ul>
-            <li><strong>BeCode Cybersecurity Training (Brussels) - </strong>October 2024 - Present</li>
-            <li><strong>Master's in Information Security and Digital Forensics, </strong>University of East London, 2024</li>
-            <li><strong>Master's in Applied Linguistics and Text Analytics, </strong>Higher School of Economics, 2023</li>
-            <li><strong>Bachelor's in Linguistics, </strong>Benue State University, 2012</li>
-        </ul>
+        <h2 class="blue-text text-darken-4">
+            <span class="material-icons left">school</span> Education
+        </h2>
+
+        <!-- Education Card -->
+        <div class="card">
+            <div class="card-content">
+                <ul class="collection">
+                    <li class="collection-item"><strong>BeCode Cybersecurity Training (Brussels) - </strong>October 2024 - Present</li>
+                    <li class="collection-item"><strong>Master's in Information Security and Digital Forensics, </strong>University of East London, 2024</li>
+                    <li class="collection-item"><strong>Master's in Applied Linguistics and Text Analytics, </strong>Higher School of Economics, 2023</li>
+                    <li class="collection-item"><strong>Bachelor's in Linguistics, </strong>Benue State University, 2012</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
-        <!-- CV Section -->
-        <section id="cv">
-            <h2><span class="material-icons">download</span> Download CV</h2>
-            <p>Click the button below to download my CV.</p>
-            <a href="images/CV_GabrielAloho.pdf" download="CV_GabrielAloho" class="cv-button">
-                <button>Download CV</button>
-            </a>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2><span class="material-icons">email</span> Contact</h2>
-
-            <!-- Display Email -->
-            <p><span class="material-icons">send</span> Send mail <a href="mailto:gabrielaloho@duck.com" id="email">gabrielaloho@duck.com</a></p>
-
-            <!-- Contact Form -->
-            <form action="https://formspree.io/f/manyjvbb" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+    <!-- Skills Section -->
+    <div id="skills" class="section grey lighten-4">
+        <div class="container">
+            <h2 class="blue-text text-darken-3"><i class="material-icons left">work</i> Skills</h2>
+            <div class="row">
+                <div class="col s12 m6">
+                    <h5>Technical Skills</h5>
+                    <ul class="collection">
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Information Security</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Python, CLI, Bash</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Information Security and Digital Forensics</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Network Design and Cisco Packet Tracer</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Linux Server Setup & Management</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Incident Response and Cybersecurity</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Natural Language Processing (NLP)</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Web Development & Security (WordPress, HTML/CSS, JS, Flask)</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Security Assessment & Penetration Testing</li>
+                    </ul>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                <div class="col s12 m6">
+                    <h5>Soft Skills</h5>
+                    <ul class="collection">
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Leadership: Led workshops and training sessions for large teams, including Nigerian Police and UBEC staff.</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Communication: Delivered complex cybersecurity concepts in accessible ways, ensuring clarity and engagement.</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Problem-Solving: Delivered custom-tailored solutions for client websites, optimizing performance and security.</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Collaboration: Worked alongside diverse teams, such as Sandtech Cons Multi-concept Ltd and Well Spring Consulting.</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Project Management: Managed and delivered projects on time, including WordPress overhauls and hosting support.</li>
+                        <li class="collection-item"><i class="material-icons left">check_circle</i> Adaptability: Quickly adapted to new client environments, providing ongoing platform support for projects like HOREMOW and eco.com.ng.</li>
+                    </ul>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+
+<!-- Projects Section -->
+<div id="projects" class="section">
+    <div class="container">
+        <h2 class="blue-text text-darken-3"><i class="material-icons left">developer_mode</i> Projects</h2>
+        <ul class="collapsible">
+            <!-- Cybersecurity Projects -->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">security</i> Nigerian Police Workshops</div>
+                <div class="collapsible-body">
+                    <p>Conducted workshops in Enugu and Kaduna, enhancing the Nigerian Police's capabilities in digital investigations. In collaboration with Sandtech Cons Multi-concept Ltd.</p>
+                    <p><strong>Role:</strong> Lead Cybersecurity Instructor</p>
+                    <p><a href="https://github.com/gabaloho/nigerian-police-workshops" target="_blank">View on GitHub</a></p>
                 </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">security</i> Ethical Hacking for UBEC</div>
+                <div class="collapsible-body">
+                    <p>Delivered hands-on training for UBEC staff, focusing on ethical hacking and penetration testing to strengthen their cybersecurity posture.</p>
+                    <p><strong>Role:</strong> Lead Cybersecurity Instructor</p>
+                    <p><a href="https://github.com/gabaloho/ethical-hacking-ubec" target="_blank">View on GitHub</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">security</i> ISC2 CC Training</div>
+                <div class="collapsible-body">
+                    <p>Conducted a six-week ISC2 Certified in Cybersecurity (CC) training, preparing 30 students for cybersecurity certification.</p>
+                    <p><strong>Role:</strong> Lead Cybersecurity Instructor</p>
+                    <p><a href="https://github.com/gabaloho/isc2-cc-training" target="_blank">View on GitHub</a></p>
+                </div>
+            </li>
+            <!-- Software Development Projects -->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">code</i> eloheemsuites.com</div>
+                <div class="collapsible-body">
+                    <p>Full-scale development, security, hosting, and continuous monitoring. Ongoing project.</p>
+                    <p><strong>Role:</strong> Lead Engineer</p>
+                    <p><a href="https://eloheemsuites.com" target="_blank">View Project</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">code</i> thebig.com.ng</div>
+                <div class="collapsible-body">
+                    <p>Custom-built website with enterprise-grade security and monitoring solutions. Ongoing project.</p>
+                    <p><strong>Role:</strong> Lead Engineer</p>
+                    <p><a href="https://thebig.com.ng" target="_blank">View Project</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">code</i> HOREMOW Europe and North America Platforms</div>
+                <div class="collapsible-body">
+                    <p>Delivered WordPress overhauls and performance optimizations. Managed continuous platform support until 2024.</p>
+                    <p><strong>Role:</strong> Lead Engineer</p>
+                    <p>
+                        <a href="https://www.horemoweurope.org" target="_blank">View HOREMOW Europe</a> | 
+                        <a href="https://www.horemowna.org" target="_blank">View HOREMOW North America</a>
+                    </p>
+                </div>
+            </li>
+            <!-- Web Development & Hosting Projects -->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">web</i> eco.com.ng</div>
+                <div class="collapsible-body">
+                    <p>Secure platform development, with monitoring and continuous maintenance. Ongoing project.</p>
+                    <p><strong>Role:</strong> Lead Engineer & Cybersecurity Consultant</p>
+                    <p><a href="https://eco.com.ng" target="_blank">View Project</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">web</i> eyahshotel.com</div>
+                <div class="collapsible-body">
+                    <p>Developed and hosted a secure platform with ongoing updates and user training. Ongoing project.</p>
+                    <p><strong>Role:</strong> Lead Engineer</p>
+                    <p><a href="https://eyahshotel.com" target="_blank">View Project</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">web</i> shadebuy.com</div>
+                <div class="collapsible-body">
+                    <p>Designed and hosted an e-commerce website with basic security and monitoring. Discontinued in 2024.</p>
+                    <p><strong>Role:</strong> Lead Engineer & Cybersecurity Consultant</p>
+                    <p><a href="https://shadebuy.com" target="_blank">View Project</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">web</i> voiceofpraiseone.com</div>
+                <div class="collapsible-body">
+                    <p>Developed and hosted a platform with domain and security configurations. Discontinued in 2024.</p>
+                    <p><strong>Role:</strong> Lead Engineer</p>
+                    <p><a href="https://voiceofpraiseone.com" target="_blank">View Project</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">web</i> Seed Builders Foundation</div>
+                <div class="collapsible-body">
+                    <p>Consulted on WordPress setup and backend configuration. Handover to IT team in 2021.</p>
+                    <p><strong>Role:</strong> Consultant</p>
+                    <p><a href="https://seedbuildersfoundation.org" target="_blank">View Project</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">web</i> Seed Builders NG</div>
+                <div class="collapsible-body">
+                    <p>Handled backend configurations and hosting. Handover to IT team in 2021.</p>
+                    <p><strong>Role:</strong> Consultant</p>
+                    <p><a href="https://seedbuildersng.com" target="_blank">View Project</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
 
-                <button type="submit" class="btn-submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+<!-- Certifications Section -->
+<section id="certifications" class="section">
+    <div class="container">
+        <h2 class="blue-text text-darken-4">
+            <span class="material-icons left">verified_user</span> Certifications & Courses
+        </h2>
 
-    <footer>
-        <p>&copy; 2024 Gabriel Aloho. All rights reserved.</p>
-    </footer>
+        <!-- Certifications Card -->
+        <div class="card">
+            <div class="card-content">
+                <ul class="collection">
+                    <li class="collection-item"><strong>Certified Ethical Hacker (CEH) Practical - </strong>EC-Council</li>
+                    <li class="collection-item"><strong>Introduction to Ethical Hacking - </strong>Codecademy</li>
+                    <li class="collection-item"><strong>Programming Foundations: Web Security - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Learning Computer Security and Internet Safety - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Introduction to Linux - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Linux: Overview and Installation - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Programming Foundations: Algorithms - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Programming Foundations: Design Patterns - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Introduction to Python: Master Python Basics - </strong>BitDegree</li>
+                    <li class="collection-item"><strong>Computer Programming for Everyone - </strong>FutureLearn</li>
+                    <li class="collection-item"><strong>Learn to Code for the Web - </strong>University of Leeds</li>
+                    <li class="collection-item"><strong>Frontend Fundamentals - </strong>Pirple</li>
+                    <li class="collection-item"><strong>Getting Your First Job in Software Development - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Programming Foundations: Fundamentals - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Programming Foundations: Beyond the Fundamentals - </strong>LinkedIn</li>
+                    <li class="collection-item"><strong>Programming Foundations: Object-Oriented Design - </strong>LinkedIn</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+<div id="contact" class="section blue darken-3 white-text">
+    <div class="container">
+        <h2><i class="material-icons left">email</i> Contact Me</h2>
+        <p>Feel free to reach out for inquiries or collaborations!</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="container">
+        <form action="https://formspree.io/f/manyjvbb" method="POST" class="contact-form">
+            <div class="input-field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required class="validate">
+            </div>
+
+            <div class="input-field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required class="validate">
+            </div>
+
+            <div class="input-field">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here" required class="materialize-textarea"></textarea>
+            </div>
+
+            <button type="submit" class="btn waves-effect waves-light teal lighten-1">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer blue darken-4">
+    <div class="container">
+        <div class="row">
+            <!-- Links Section -->
+            <div class="col s12 m6 l4">
+                <h5 class="white-text">Quick Links</h5>
+                <ul>
+                    <li><a href="#about" class="white-text">About</a></li>
+                    <li><a href="#skills" class="white-text">Skills</a></li>
+                    <li><a href="#projects" class="white-text">Projects</a></li>
+                    <li><a href="#education" class="white-text">Education</a></li>
+                    <li><a href="#certifications" class="white-text">Certifications</a></li>
+                    <li><a href="#contact" class="white-text">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="col s12 m6 l4">
+                <h5 class="white-text">Follow Me</h5>
+                <ul>
+                    <li><a href="https://www.linkedin.com" class="white-text"><i class="fab fa-linkedin fa-2x"></i> LinkedIn</a></li>
+                    <li><a href="https://twitter.com" class="white-text"><i class="fab fa-twitter fa-2x"></i> Twitter</a></li>
+                    <li><a href="https://github.com" class="white-text"><i class="fab fa-github fa-2x"></i> GitHub</a></li>
+                    <li><a href="https://www.instagram.com" class="white-text"><i class="fab fa-instagram fa-2x"></i> Instagram</a></li>
+                </ul>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="col s12 m12 l4 center">
+                <p class="white-text">&copy; 2025 Gabriel Aloho. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
 <script>
-    // Function to fetch language content from the relevant JSON file
-    async function loadLanguageContent(language) {
-        try {
-            const response = await fetch(`/locales/${language}/${language}.json`);
-            if (!response.ok) {
-                throw new Error('Language file not found');
-            }
-            const data = await response.json();
-            updatePageContent(data); // Update page content with data
-        } catch (error) {
-            console.error('Error loading language file:', error);
-        }
-    }
+  // Dark Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-    // Update the page content dynamically based on JSON data
-    function updatePageContent(data) {
-        // Assuming the JSON structure matches the HTML elements that need to be updated
-        document.getElementById('about').querySelector('h2').textContent = data.about.header;
-        document.getElementById('about').querySelector('p').textContent = data.about.text;
-        document.getElementById('skills').querySelector('h2').textContent = data.skills.header;
-        document.getElementById('skills').querySelector('ul').innerHTML = data.skills.items.map(item => `<li>${item}</li>`).join('');
-        document.getElementById('projects').querySelector('h2').textContent = data.projects.header;
-        document.getElementById('projects').querySelector('.project-list').innerHTML = data.projects.list.map(project => 
-            `<div class="project">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <p><a href="${project.link}" target="_blank">Bekijk op GitHub</a></p>
-            </div>`
-        ).join('');
-        // Repeat for other sections...
-    }
-
-    // Load the saved language preference from localStorage when the page loads
-    window.addEventListener('load', () => {
-        const savedLanguage = localStorage.getItem('language') || 'en'; // Default to English
-        document.getElementById('language-select').value = savedLanguage;
-        loadLanguageContent(savedLanguage); // Load the content for the saved language
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+        document.querySelector('.hero-section').classList.toggle('dark-mode');
+        document.querySelector('.hero-section').classList.toggle('light-mode');
     });
 
-    // Change language based on selection and reload content
-    function changeLanguage() {
-        const selectedLanguage = document.getElementById('language-select').value;
-        localStorage.setItem('language', selectedLanguage); // Store in localStorage for persistence
-        loadLanguageContent(selectedLanguage); // Load the content for the selected language
-    }
-
-    function changeFontSize(action) {
-        const body = document.body;
-        const currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
-        const newFontSize = action === 'increase' ? currentFontSize * 1.1 : currentFontSize / 1.1;
-        body.style.fontSize = newFontSize + 'px';
-    }
-
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
+    // Initialize Materialize JS
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+        var collapsible = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(collapsible);
     });
+
+    // Initialize Materialize CSS
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+    });
+
+    // Initialize Materialize Textarea
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.materialize-textarea');
+        var instances = M.CharacterCounter.init(elems);
+    });
+
+    
+    
 </script>
+
 
 </body>
 </html>

@@ -1,16 +1,26 @@
-// Placeholder for future scripts, like project filtering or theme switcher
-console.log("Welcome to Gabriel's Portfolio");
-
-// Get theme toggle button and load the current theme from localStorage
+// Get the theme toggle button and load the current theme from localStorage
 const themeToggleButton = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme') || 'light';
+let currentTheme = localStorage.getItem('theme') || 'light';
 
 // Set the theme based on localStorage or default to 'light'
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    themeToggleButton.textContent = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+
+    // Change the button icon based on the theme
+    const icon = theme === 'dark' ? 'brightness_7' : 'brightness_4'; // Switch icon depending on the theme
+    themeToggleButton.querySelector('i').textContent = icon;
 }
+
+// Initial theme setup based on currentTheme value
+setTheme(currentTheme);
+
+// Add event listener to the button to toggle the theme when clicked
+themeToggleButton.addEventListener('click', () => {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark'; // Toggle theme
+    setTheme(currentTheme); // Apply the theme
+});
+
 
 // Initialize theme on page load
 setTheme(currentTheme);
