@@ -5,42 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Aloho | Portfolio</title>
 
-    <!-- Link to external stylesheets -->
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  
 
-    <!-- Materialize JS (optional) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <style>
-        body.light-mode {
-            background-color: white;
-            color: black;
-        }
-        body.dark-mode {
-            background-color: black;
-            color: white;
-        }
-        .hero-section.light-mode {
-            background-color: #1565c0; /* blue darken-3 */
-            color: white;
-        }
-        .hero-section.dark-mode {
-            background-color: black !important; /* grey darken-3 */
-            color: white;
-        }
-    </style>
+<style>
+    /* Define the background and text colors for dark mode */
+    :root {
+        --bg-color: #333; /* Dark background for dark mode */
+        --text-color: #fff; /* Light text for dark mode */
+    }
+
+    /* Dark mode styles */
+    body.dark-mode, body.dark-mode * {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    /* Specific overrides for Materialize components in dark mode */
+    body.dark-mode .hero-section,
+    body.dark-mode .card,
+    body.dark-mode .sidenav,
+    body.dark-mode footer {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    /* Links, buttons, and other interactive elements */
+    body.dark-mode a, body.dark-mode .btn, body.dark-mode .sidenav-trigger {
+        color: var(--text-color) !important;
+        border-color: var(--text-color) !important;
+    }
+
+    /* Hover effects for interactive elements */
+    body.dark-mode a:hover, body.dark-mode .btn:hover, body.dark-mode .sidenav-trigger:hover {
+        background-color: var(--text-color) !important;
+        color: var(--bg-color) !important;
+    }
+
+    /* Ensure Materialize’s modal, dropdown, and other components match dark mode */
+    body.dark-mode .modal, body.dark-mode .dropdown-content {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    /* Materialize components like cards and navbar */
+    body.dark-mode .card, body.dark-mode .navbar {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+    }
+
+     body.dark-mode .card {
+      background-color: #444 !important;
+      color: #fff;
+    }
+    body.dark-mode .input-field input,
+    body.dark-mode .input-field textarea {
+      background-color: #555 !important;
+      color: #fff;
+    }
+</style>
+   
+
 </head>
-
 <body class="light-mode">
     <header>
-        <nav class="blue darken-3">
+        <nav class=" purple darken-4">
             <div class="nav-wrapper container">
-                <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -49,15 +86,11 @@
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <!-- Theme Toggle Button -->
-            <button id="theme-toggle" class="btn-flat white-text" style="margin-right: 10px;">
-            <i class="material-icons">brightness_4</i>
-            </button>
-            
+                <button id="theme-toggle" class="btn-flat white-text">
+                    <i class="material-icons">brightness_4</i>
+                </button>
             </div>
         </nav>
-        <!-- Theme Toggle Button -->
-        <!-- Sidenav -->
         <ul class="sidenav" id="mobile-menu">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -68,43 +101,45 @@
         </ul>
     </header>
 
+
+<main>
 <!-- Hero Section -->
-<div class="section hero-section blue darken-3 white-text center valign-wrapper" style="height: 70vh;">
+<div class="section hero-section grey lighten-4 center valign-wrapper" style="height: 70vh; color: #000;">
     <div class="container">
         <div class="row">
             <!-- Profile Image -->
             <div class="col s12 m4 center-align">
-                <img src="images/profile.jpg" alt="Gabriel Aloho" class="circle responsive-img z-depth-2" 
+                <img src="images/profile.png" alt="Gabriel Aloho" class="circle responsive-img z-depth-2" 
                      style="width: 200px; height: 200px; object-fit: cover;">
             </div>
             <!-- Name and Bio -->
             <div class="col s12 m8">
-        <h1 class="flow-text" style="font-size: 3rem; font-weight: bold;">Gabriel Aloho</h1>
-        <p class="flow-text" style="font-size: 1.5rem; margin-top: 10px;">
-        Cybersecurity Expert | Ethical Hacking | Digital Forensics | Software Engineering | Risk Management | 
-        Technical Training & Leadership
-         </p>
+                <h1 class="purple-text text-darken-3">Gabriel Aloho</h1>
+                <p class="flow-text" style="font-size: 1.5rem; margin-top: 10px;">
+                    Cybersecurity Expert | Ethical Hacking | Digital Forensics | Software Engineering | Risk Management | 
+                    Technical Training & Leadership
+                </p>
+            </div>
         </div>
-
-</div>
-</div>
+    </div>
 </div>
 
 <!-- About Section -->
 <div id="about" class="section">
     <div class="container">
-        <h2 class="blue-text text-darken-3"><i class="material-icons left">person</i> About Me</h2>
+        <h2 class="purple-text text-darken-3"><i class="material-icons left">person</i> About Me</h2>
         <p class="flow-text">I am a seasoned cybersecurity professional with expertise in Information Security, Digital Forensics, and Incident Response, complemented by a background in Linguistics and Text Analytics. I have led impactful workshops for organizations like the Nigeria Police and UBEC, specializing in ethical hacking, penetration testing, and security assessments to help businesses strengthen their defenses. Alongside cybersecurity, I have significant experience in web development, delivering security-focused website projects, WordPress overhauls, and ongoing support. Holding a Master’s degree in Information Security and Digital Forensics from the University of East London and currently expanding my knowledge through a Cybersecurity training program at BeCode in Brussels, I am passionate about staying ahead of cybersecurity trends. With strong leadership and communication skills, I manage client projects and cross-functional teams effectively, and in January 2025, I will be launching Gue Cyber Labs, my new cybersecurity venture.</p>
-       <a href="#contact"><button class="btn waves-effect waves-light">Contact Me</button></a>
+       <a href="#contact"><button class="btn waves-effect waves-light purple darken-4">Contact Me</button></a>
     </div>
 </div>
 
 
 
+
 <!-- Education Section -->
-<section id="education" class="section">
+<section id="education " class="section">
     <div class="container">
-        <h2 class="blue-text text-darken-4">
+        <h2 class="purple-text text-darken-4">
             <span class="material-icons left">school</span> Education
         </h2>
 
@@ -125,7 +160,7 @@
     <!-- Skills Section -->
     <div id="skills" class="section grey lighten-4">
         <div class="container">
-            <h2 class="blue-text text-darken-3"><i class="material-icons left">work</i> Skills</h2>
+            <h2 class="purple-text text-darken-3"><i class="material-icons left">work</i> Skills</h2>
             <div class="row">
                 <div class="col s12 m6">
                     <h5>Technical Skills</h5>
@@ -141,7 +176,7 @@
                         <li class="collection-item"><i class="material-icons left">check_circle</i> Security Assessment & Penetration Testing</li>
                     </ul>
                 </div>
-                <div class="col s12 m6">
+                <div class="col s12 m6 light-mode">
                     <h5>Soft Skills</h5>
                     <ul class="collection">
                         <li class="collection-item"><i class="material-icons left">check_circle</i> Leadership: Led workshops and training sessions for large teams, including Nigerian Police and UBEC staff.</li>
@@ -160,7 +195,7 @@
 <!-- Projects Section -->
 <div id="projects" class="section">
     <div class="container">
-        <h2 class="blue-text text-darken-3"><i class="material-icons left">developer_mode</i> Projects</h2>
+        <h2 class="purple-text text-darken-3"><i class="material-icons left">developer_mode</i> Projects</h2>
         <ul class="collapsible">
             <!-- Cybersecurity Projects -->
             <li>
@@ -269,9 +304,9 @@
 </div>
 
 <!-- Certifications Section -->
-<section id="certifications" class="section">
+<section id="certifications" class="section grey lighten-4">
     <div class="container">
-        <h2 class="blue-text text-darken-4">
+        <h2 class="purple-text text-darken-4">
             <span class="material-icons left">verified_user</span> Certifications & Courses
         </h2>
 
@@ -300,38 +335,53 @@
         </div>
     </div>
 </section>
-    <!-- Contact Section -->
-<div id="contact" class="section blue darken-3 white-text">
-    <div class="container">
-        <h2><i class="material-icons left">email</i> Contact Me</h2>
-        <p>Feel free to reach out for inquiries or collaborations!</p>
+
+
+  <!-- Contact Section -->
+<div id="contact" class="section">
+  <div class="container">
+    <h2 class="purple-text text-darken-4">
+      <span class="material-icons left">email</span> Contact Me
+    </h2>
+    <div class="section">
+      <form action="https://formspree.io/f/manyjvbb" method="POST">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Get in Touch</span>
+            <p>Feel free to reach out for inquiries or collaborations!</p>
+
+            <!-- Name Field -->
+            <div class="input-field">
+              <input type="text" id="name" name="name" required>
+              <label for="name">Your Name</label>
+            </div>
+
+            <!-- Email Field -->
+            <div class="input-field">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Your Email</label>
+            </div>
+
+            <!-- Message Field -->
+            <div class="input-field">
+              <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn waves-effect waves-light purple darken-4">Send Message</button>
+          </div>
+        </div>
+      </form>
     </div>
-
-    <!-- Contact Form -->
-    <div class="container">
-        <form action="https://formspree.io/f/manyjvbb" method="POST" class="contact-form">
-            <div class="input-field">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" required class="validate">
-            </div>
-
-            <div class="input-field">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Your Email Address" required class="validate">
-            </div>
-
-            <div class="input-field">
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Type your message here" required class="materialize-textarea"></textarea>
-            </div>
-
-            <button type="submit" class="btn waves-effect waves-light teal lighten-1">Send Message</button>
-        </form>
-    </div>
+  </div>
 </div>
 
+</main>
+
+
 <!-- Footer -->
-<footer class="page-footer blue darken-4">
+<footer class="page-footer purple darken-4">
     <div class="container">
         <div class="row">
             <!-- Links Section -->
@@ -365,41 +415,39 @@
         </div>
     </div>
 </footer>
-<script>
-  // Dark Mode Toggle
-    const themeToggle = document.getElementById('theme-toggle');
+    <script>
+    const themeToggleButton = document.getElementById('theme-toggle');
     const body = document.body;
 
-    themeToggle.addEventListener('click', () => {
+    // Set initial icon based on the current mode
+    const icon = themeToggleButton.querySelector('.material-icons');
+    if (body.classList.contains('dark-mode')) {
+        icon.textContent = 'brightness_7'; // Dark mode icon
+    } else {
+        icon.textContent = 'brightness_4'; // Light mode icon
+    }
+
+    // Toggle dark mode and update the icon when clicked
+    themeToggleButton.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
-        body.classList.toggle('light-mode');
-        document.querySelector('.hero-section').classList.toggle('dark-mode');
-        document.querySelector('.hero-section').classList.toggle('light-mode');
+        const icon = themeToggleButton.querySelector('.material-icons');
+        
+        // Update icon based on dark mode state
+        icon.textContent = body.classList.contains('dark-mode') ? 'brightness_7' : 'brightness_4';
     });
-
-    // Initialize Materialize JS
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
-        var collapsible = document.querySelectorAll('.collapsible');
-        var instances = M.Collapsible.init(collapsible);
-    });
-
-    // Initialize Materialize CSS
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.collapsible');
-        var instances = M.Collapsible.init(elems);
-    });
-
-    // Initialize Materialize Textarea
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.materialize-textarea');
-        var instances = M.CharacterCounter.init(elems);
-    });
-
-    
-    
 </script>
+<!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    // JavaScript to toggle dark mode
+    document.getElementById('dark-mode-toggle').addEventListener('change', function () {
+      if (this.checked) {
+        document.body.classList.add('dark-mode'); // Enable dark mode
+      } else {
+        document.body.classList.remove('dark-mode'); // Disable dark mode
+      }
+    });
+  </script>
 
 
 </body>
