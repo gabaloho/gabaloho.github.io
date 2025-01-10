@@ -16,7 +16,6 @@
 <!-- Materialize JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  
 
 <style>
     /* Define the background and text colors for dark mode */
@@ -154,54 +153,84 @@ body.dark-mode .collection-item em {
 body.dark-mode h2 {
     color: #bb86fc;
 }
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem; /* Adjust heading size for tablets */
+ /* Adjust Hero Section on smaller screens */
+    .hero-section {
+        height: 100vh; /* Make sure it takes full screen height on mobile */
+        padding: 50px 0; /* Add padding to ensure content is well-spaced */
     }
-    .hero h2 {
-        font-size: 2rem; /* Adjust subheading size */
-    }
-    .hero p {
-        font-size: 1.2rem; /* Adjust paragraph text */
-    }
-}
 
-@media (max-width: 768px) {
-    .hero {
-        padding: 100px 0;
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .hero h1 {
-        font-size: 2.5rem; /* Adjust heading size for smaller screens */
-    }
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-    .hero p {
-        font-size: 1rem; /* Smaller paragraph text */
-        line-height: 1.5; /* Tighter line spacing */
-    }
-    .hero .btn {
-        font-size: 1rem; /* Adjust button size */
-        padding: 10px 20px;
-    }
-}
 
-@media (max-width: 600px) {
+    .hero .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjusting content layout for mobile devices */
     .hero h1 {
-        font-size: 2rem; /* Adjust heading size for mobile */
+        font-size: 2rem; /* Ensure it's smaller on mobile */
     }
-    .hero h2 {
-        font-size: 1.5rem;
-    }
+    
     .hero p {
-        font-size: 0.9rem; /* Smaller paragraph text */
+        font-size: 1rem;
     }
-    .hero .btn {
-        font-size: 0.9rem; /* Adjust button size */
-        padding: 8px 16px;
+
+    /* Hero Section Text Styling */
+    .hero .col {
+        text-align: center;
+        margin-bottom: 20px;
     }
-}
+
+    /* Mobile Menu */
+    .sidenav {
+        width: 250px; /* Adjust the width of the sidenav on mobile */
+    }
+
+    /* Responsive Layout for smaller screens */
+    @media (max-width: 768px) {
+        .hero {
+            padding: 60px 0; /* More padding on smaller devices */
+        }
+
+        .hero .col {
+            margin-bottom: 20px;
+        }
+
+        /* Adjust navbar for mobile */
+        nav .sidenav-trigger {
+            font-size: 2rem; /* Increase size for better readability */
+        }
+
+        /* Ensure proper spacing for mobile menu */
+        .sidenav a {
+            font-size: 1.2rem; /* Larger font for easier navigation */
+        }
+    }
+
+    /* Adjust About Section on smaller screens */
+    @media (max-width: 768px) {
+        #about {
+            padding: 20px 0;
+        }
+
+        #about .container {
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.2rem; /* Adjust heading size */
+        }
+
+        #about p {
+            font-size: 1rem; /* Smaller text for better readability */
+        }
+    }
 </style>
    
 
@@ -238,6 +267,9 @@ body.dark-mode h2 {
 
 
 <main>
+    
+
+
 <!-- Hero Section -->
 <div class="section hero-section grey lighten-4 center valign-wrapper" style="height: 70vh; color: #000;">
     <div class="container">
@@ -262,7 +294,6 @@ body.dark-mode h2 {
         </div>
     </div>
 </div>
-
 
 <!-- About Section -->
 <div id="about" class="section">
@@ -293,8 +324,6 @@ body.dark-mode h2 {
         <a href="#contact"><button class="btn waves-effect waves-light">Contact Me</button></a>
     </div>
 </div>
-
-
 
 
 <!-- Education Section -->
@@ -1145,12 +1174,14 @@ body.dark-mode h2 {
     var instances = M.Collapsible.init(elems);
   });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Mobile Menu JavaScript Fix -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        M.Sidenav.init(elems);
+        // Initialize sidenav
+        var sidenavElems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sidenavElems);
 
+        // Initialize collapsible elements if needed
         var collapsibleElems = document.querySelectorAll('.collapsible');
         M.Collapsible.init(collapsibleElems);
     });
