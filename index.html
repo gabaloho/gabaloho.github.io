@@ -154,7 +154,38 @@ body.dark-mode .collection-item em {
 body.dark-mode h2 {
     color: #bb86fc;
 }
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem; /* Adjust heading size for tablets */
+    }
+    .hero h2 {
+        font-size: 2rem; /* Adjust subheading size */
+    }
+    .hero p {
+        font-size: 1.2rem; /* Adjust paragraph text */
+    }
+}
 
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0;
+    }
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem; /* Smaller paragraph text */
+        line-height: 1.5; /* Tighter line spacing */
+    }
+    .hero .btn {
+        font-size: 1rem; /* Adjust button size */
+        padding: 10px 20px;
+    }
+}
 </style>
    
 
@@ -1097,6 +1128,13 @@ body.dark-mode h2 {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems);
   });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+    });
 </script>
 
 
