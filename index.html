@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   
 
 <style>
@@ -67,13 +73,95 @@
       background-color: #555 !important;
       color: #fff;
     }
+
+    /* Global style for certification section */
+#certifications {
+    background-color: #f5f5f5;
+    padding: 30px 0;
+}
+
+#certifications h2 {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    color: #673ab7;
+    margin-bottom: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.collection-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.collection-item:last-child {
+    border-bottom: none;
+}
+
+.collection-item strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.collection-item em {
+    font-size: 14px;
+    color: #777;
+}
+
+.collection-item ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.collection-item ul li {
+    font-size: 14px;
+    color: #444;
+}
+
+.material-icons.left {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/* Styling for dark mode */
+body.dark-mode #certifications {
+    background-color: #444 !important;
+}
+
+body.dark-mode .card {
+    background-color: #555 !important;
+    color: #fff;
+}
+
+body.dark-mode .collection-item {
+    background-color: #333 !important;
+    color: #fff;
+}
+
+body.dark-mode .collection-item em {
+    color: #bbb;
+}
+
+body.dark-mode h2 {
+    color: #bb86fc;
+}
+
 </style>
    
 
 </head>
 <body class="light-mode">
     <header>
-        <nav class=" purple darken-4">
+        <nav class="">
             <div class="nav-wrapper container">
                 <a href="#" data-target="mobile-menu" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
@@ -115,21 +203,47 @@
             <!-- Name and Bio -->
             <div class="col s12 m8">
                 <h1 class="purple-text text-darken-3">Gabriel Aloho</h1>
-                <p class="flow-text" style="font-size: 1.5rem; margin-top: 10px;">
-                    Cybersecurity Expert | Ethical Hacking | Digital Forensics | Software Engineering | Risk Management | 
-                    Technical Training & Leadership
+                <p class="flow-text" style="font-size: 1.5rem; margin-top: 10px; font-weight: bold;">
+                    Cybersecurity Leader | Ethical Hacker | Digital Forensics Expert | Full-Stack Developer | Risk Management Strategist | 
+                    Technical Trainer & Project Leader
                 </p>
+                <p class="flow-text" style="font-size: 1.2rem; margin-top: 10px; color: #333;">
+                    I specialize in driving comprehensive security strategies, performing high-level penetration tests, and delivering cutting-edge digital forensics investigations. With a solid foundation in software development and cybersecurity, I focus on creating secure, scalable, and high-performance solutions. As a passionate educator, I empower teams and individuals with the knowledge they need to mitigate risks and stay ahead of cyber threats. Let's connect and build secure solutions for the future.
+                </p>
+                <a href="#about"><button class="btn waves-effect waves-light">Learn More</button></a>
             </div>
         </div>
     </div>
 </div>
 
+
 <!-- About Section -->
 <div id="about" class="section">
     <div class="container">
         <h2 class="purple-text text-darken-3"><i class="material-icons left">person</i> About Me</h2>
-        <p class="flow-text">I am a seasoned cybersecurity professional with expertise in Information Security, Digital Forensics, and Incident Response, complemented by a background in Linguistics and Text Analytics. I have led impactful workshops for organizations like the Nigeria Police and UBEC, specializing in ethical hacking, penetration testing, and security assessments to help businesses strengthen their defenses. Alongside cybersecurity, I have significant experience in web development, delivering security-focused website projects, WordPress overhauls, and ongoing support. Holding a Master’s degree in Information Security and Digital Forensics from the University of East London and currently expanding my knowledge through a Cybersecurity training program at BeCode in Brussels, I am passionate about staying ahead of cybersecurity trends. With strong leadership and communication skills, I manage client projects and cross-functional teams effectively, and in January 2025, I will be launching Gue Cyber Labs, my new cybersecurity venture.</p>
-       <a href="#contact"><button class="btn waves-effect waves-light purple darken-4">Contact Me</button></a>
+        <p class="flow-text">I am a highly experienced and versatile professional with a unique blend of expertise in <strong>Cybersecurity</strong>, <strong>Web Development</strong>, and <strong>Artificial Intelligence</strong>, combined with a strong background in <strong>Linguistics</strong> and <strong>Text Analytics</strong>. Over the years, I have gained hands-on experience in critical areas such as <strong>Information Security</strong>, <strong>Digital Forensics</strong>, <strong>Incident Response</strong>, and <strong>Penetration Testing</strong>, delivering impactful solutions to organizations in both the public and private sectors.</p>
+        
+        <p class="flow-text">As a trainer, I have successfully conducted workshops for key Nigerian organizations like the <strong>Nigerian Police</strong> and <strong>UBEC</strong>, focusing on <strong>ethical hacking</strong>, <strong>cybersecurity assessments</strong>, and <strong>real-world scenarios</strong> to strengthen their cybersecurity posture. Additionally, I have led several <strong>web development projects</strong>, specializing in creating <strong>secure platforms</strong>, <strong>WordPress overhauls</strong>, and providing <strong>continuous support</strong> to clients, ensuring robust security and optimal performance for their online operations.</p>
+        
+        <p class="flow-text">I hold a Master’s degree in <strong>Information Security and Digital Forensics</strong> from the <strong>University of East London</strong> and am currently enhancing my skills through a <strong>Cybersecurity training program</strong> at BeCode in <strong>Brussels</strong>. With a passion for staying ahead of emerging cybersecurity trends, I am constantly expanding my knowledge to provide innovative solutions for businesses in an increasingly digital world.</p>
+
+        <p class="flow-text">With a track record of leading cross-functional teams, managing client projects, and delivering results under pressure, I am committed to making meaningful contributions to any organization I collaborate with. I am also gearing up to launch my own cybersecurity venture, <strong>Gue Cyber Labs</strong>, in January 2025, further expanding my entrepreneurial journey.</p>
+
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Cybersecurity</span>
+            <span class="chip">Information Security</span>
+            <span class="chip">Digital Forensics</span>
+            <span class="chip">Incident Response</span>
+            <span class="chip">Penetration Testing</span>
+            <span class="chip">Ethical Hacking</span>
+            <span class="chip">Web Development</span>
+            <span class="chip">AI/LLM/NLP</span>
+            <span class="chip">Leadership</span>
+            <span class="chip">Project Management</span>
+            <span class="chip">Cybersecurity Training</span>
+        </p>
+
+        <a href="#contact"><button class="btn waves-effect waves-light">Contact Me</button></a>
     </div>
 </div>
 
@@ -137,171 +251,633 @@
 
 
 <!-- Education Section -->
-<section id="education " class="section">
-    <div class="container">
-        <h2 class="purple-text text-darken-4">
-            <span class="material-icons left">school</span> Education
-        </h2>
-
-        <!-- Education Card -->
+<section id="education" class="section grey lighten-4">
+  <div class="container">
+    <h2 class="purple-text text-darken-3">
+      <i class="material-icons left">school</i> Education
+    </h2>
+    <div class="row">
+      <!-- Education Cards -->
+      <div class="col s12 m6 l4">
         <div class="card">
-            <div class="card-content">
+          <div class="card-content">
+            <span class="card-title purple-text text-darken-3">
+              BeCode Cybersecurity Training
+            </span>
+            <p class="grey-text text-darken-1">Brussels, Belgium</p>
+            <p><strong>October 2024 – Present</strong></p>
+            <p>
+              Comprehensive training in cybersecurity principles, ethical hacking,
+              and digital forensics.
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="https://becode.org/all-trainings/pedagogical-framework-cyber-security/" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title purple-text text-darken-3">
+              MSc in Information Security and Digital Forensics
+            </span>
+            <p class="grey-text text-darken-1">University of East London, UK</p>
+            <p><strong>Graduated: 2024</strong></p>
+            <p>
+              Specialized in forensic analysis, penetration testing, and information
+              system security.
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="https://www.uel.ac.uk/postgraduate/courses/msc-information-security-digital-forensics" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title purple-text text-darken-3">
+              MSc in Applied Linguistics and Text Analytics
+            </span>
+            <p class="grey-text text-darken-1">Higher School of Economics, Russia</p>
+            <p><strong>Withdrew due to war in Ukraine: 2023</strong></p>
+            <p>
+              Focused on natural language processing, data-driven insights, and
+              applied computational linguistics.
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="https://nnov.hse.ru/en/ma/appling/" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title purple-text text-darken-3">
+              BSc in Linguistics
+            </span>
+            <p class="grey-text text-darken-1">Benue State University, Nigeria</p>
+            <p><strong>Graduated: 2012</strong></p>
+            <p>
+              Emphasized syntax, phonetics, and semantics in language studies.
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="https://www.bsum.edu.ng/w3/linguistics.php" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Skills Section -->
+<div id="skills" class="section grey lighten-4">
+    <div class="container">
+        <h2 class="purple-text text-darken-3"><i class="material-icons left">work</i> Skills</h2>
+        <div class="row">
+            <!-- Technical Skills Table (Left Side) -->
+<div class="col s12 m6">
+  <h5>Technical Skills</h5>
+  <table class="highlight">
+    <thead>
+      <tr>
+        <th>Skill</th>
+        <th>Proficiency</th>
+        <th>Years of Experience</th>
+        <th>Last Used/Frequency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <i class="material-icons left teal-text">security</i>
+          Cybersecurity (Ethical Hacking, Incident Response, Penetration Testing, Vulnerability Assessment)
+        </td>
+        <td>Advanced</td>
+        <td>4+ years (since November 2022)</td>
+        <td>Weekly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left green-text">code</i>
+          Python
+        </td>
+        <td>Advanced</td>
+        <td>4+ years (since June 2020)</td>
+        <td>Weekly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left orange-text">storage</i>
+          Linux Server Management
+        </td>
+        <td>Advanced</td>
+        <td>2+ years (since March 2023)</td>
+        <td>Weekly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left blue-text">web</i>
+          Web Development (HTML, CSS, JavaScript, Responsive Web Design)
+        </td>
+        <td>Intermediate</td>
+        <td>4+ years (since May 2020)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left purple-text">terminal</i>
+          Bash Scripting
+        </td>
+        <td>Intermediate</td>
+        <td>2+ years (since October 2022)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left amber-text">assignment</i>
+          Project Management (Planning, Risk Management, Resource Allocation)
+        </td>
+        <td>Intermediate</td>
+        <td>1+ year (since July 2023)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left cyan-text">group</i>
+          Remote Team Collaboration
+        </td>
+        <td>Advanced</td>
+        <td>4+ years (since April 2020)</td>
+        <td>Weekly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left deep-orange-text">layers</i>
+          Software Engineering (Design Patterns, Agile)
+        </td>
+        <td>Intermediate</td>
+        <td>4+ years (since May 2020)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left red-text">settings_applications</i>
+          Backend Development (Python, Flask/Django)
+        </td>
+        <td>Intermediate</td>
+        <td>2+ years (since 2022)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left pink-text">bug_report</i>
+          Malware Analysis, Cybersecurity Tools, Computer Forensics, Security Policies
+        </td>
+        <td>Advanced</td>
+        <td>2+ years (since November 2022)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left purple-text">language</i>
+          HTML5, CSS3
+        </td>
+        <td>Intermediate</td>
+        <td>4+ years (since May 2020)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left indigo-text">autorenew</i>
+          Automation, System Administration
+        </td>
+        <td>Intermediate</td>
+        <td>2+ years (since October 2022)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left brown-text">shield</i>
+          Web Application Security, Network Security
+        </td>
+        <td>Intermediate</td>
+        <td>2+ years (since October 2022)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left green-text">lightbulb</i>
+          Programming Basics, Problem-Solving with Code
+        </td>
+        <td>Intermediate</td>
+        <td>4+ years (since April 2020)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left yellow-text">javascript</i>
+          JavaScript, Frontend Web Technologies
+        </td>
+        <td>Intermediate</td>
+        <td>4+ years (since May 2020)</td>
+        <td>Monthly</td>
+      </tr>
+      <tr>
+        <td>
+          <i class="material-icons left light-blue-text">analytics</i>
+          Digital Workplace Trends, Data-Driven Decision Making
+        </td>
+        <td>Intermediate</td>
+        <td>4+ years (since April 2020)</td>
+        <td>Monthly</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+            
+            <!-- Soft Skills List (Right Side) -->
+            <div class="col s12 m6">
+                <h5>Soft Skills</h5>
                 <ul class="collection">
-                    <li class="collection-item"><strong>BeCode Cybersecurity Training (Brussels) - </strong>October 2024 - Present</li>
-                    <li class="collection-item"><strong>Master's in Information Security and Digital Forensics, </strong>University of East London, 2024</li>
-                    <li class="collection-item"><strong>Master's in Applied Linguistics and Text Analytics, </strong>Higher School of Economics, 2023</li>
-                    <li class="collection-item"><strong>Bachelor's in Linguistics, </strong>Benue State University, 2012</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Leadership: Led workshops and training sessions for the Nigerian Police and UBEC staff, improving their cybersecurity capabilities.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Communication: Delivered complex cybersecurity concepts in clear, engaging ways for diverse audiences, such as the Nigerian Police and aspiring cybersecurity professionals during ISC2 CC Training.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Problem-Solving: Addressed and solved specific issues like website security for clients such as Eloheem Suites and TheBig, ensuring platform integrity.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Collaboration: Worked closely with teams from UBEC, Nigerian Police, and remote development teams to deliver customized solutions and training in cybersecurity and web development.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Project Management: Managed the development and maintenance of platforms for HOREMOW Europe and North America, and eco.com.ng, delivering on time and meeting client needs.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Adaptability: Quickly adapted to new platforms and technologies, such as during the redesign and optimization of HOREMOW platforms and the development of e-commerce solutions like ShadeBuy.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Technical Communication: Facilitated the seamless handover of technical projects such as Seed Builders Foundation’s WordPress setup, ensuring internal teams were well-equipped for long-term operation.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Teaching & Training: Delivered hands-on ethical hacking training to UBEC staff and cybersecurity exam preparation sessions for students in the ISC2 CC Training project, enhancing learning through real-world examples.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Client-Focused Development: Tailored solutions to client-specific needs, including providing security and performance enhancements for websites like eco.com.ng, eyahshotel.com, and voiceofpraiseone.com.</li>
+                    <li class="collection-item"><i class="material-icons left">check_circle</i> Conflict Resolution: Managed client expectations and resolved technical issues swiftly, ensuring smooth project delivery and client satisfaction.</li>
                 </ul>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-    <!-- Skills Section -->
-    <div id="skills" class="section grey lighten-4">
-        <div class="container">
-            <h2 class="purple-text text-darken-3"><i class="material-icons left">work</i> Skills</h2>
-            <div class="row">
-                <div class="col s12 m6">
-                    <h5>Technical Skills</h5>
-                    <ul class="collection">
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Information Security</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Python, CLI, Bash</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Information Security and Digital Forensics</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Network Design and Cisco Packet Tracer</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Linux Server Setup & Management</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Incident Response and Cybersecurity</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Natural Language Processing (NLP)</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Web Development & Security (WordPress, HTML/CSS, JS, Flask)</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Security Assessment & Penetration Testing</li>
-                    </ul>
-                </div>
-                <div class="col s12 m6 light-mode">
-                    <h5>Soft Skills</h5>
-                    <ul class="collection">
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Leadership: Led workshops and training sessions for large teams, including Nigerian Police and UBEC staff.</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Communication: Delivered complex cybersecurity concepts in accessible ways, ensuring clarity and engagement.</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Problem-Solving: Delivered custom-tailored solutions for client websites, optimizing performance and security.</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Collaboration: Worked alongside diverse teams, such as Sandtech Cons Multi-concept Ltd and Well Spring Consulting.</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Project Management: Managed and delivered projects on time, including WordPress overhauls and hosting support.</li>
-                        <li class="collection-item"><i class="material-icons left">check_circle</i> Adaptability: Quickly adapted to new client environments, providing ongoing platform support for projects like HOREMOW and eco.com.ng.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
 <!-- Projects Section -->
 <div id="projects" class="section">
     <div class="container">
-        <h2 class="purple-text text-darken-3"><i class="material-icons left">developer_mode</i> Projects</h2>
+        <h2 class="purple-text text-darken-3">
+            <i class="material-icons left">developer_mode</i> Projects
+        </h2>
         <ul class="collapsible">
-            <!-- Cybersecurity Projects -->
+            <!-- WiFlix Project -->
             <li>
-                <div class="collapsible-header"><i class="material-icons">security</i> Nigerian Police Workshops</div>
-                <div class="collapsible-body">
-                    <p>Conducted workshops in Enugu and Kaduna, enhancing the Nigerian Police's capabilities in digital investigations. In collaboration with Sandtech Cons Multi-concept Ltd.</p>
-                    <p><strong>Role:</strong> Lead Cybersecurity Instructor</p>
-                    <p><a href="https://github.com/gabaloho/nigerian-police-workshops" target="_blank">View on GitHub</a></p>
+                <div class="collapsible-header">
+                    <i class="material-icons">school</i> WiFlix: Post-COVID Educational Platform
                 </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">security</i> Ethical Hacking for UBEC</div>
                 <div class="collapsible-body">
-                    <p>Delivered hands-on training for UBEC staff, focusing on ethical hacking and penetration testing to strengthen their cybersecurity posture.</p>
-                    <p><strong>Role:</strong> Lead Cybersecurity Instructor</p>
-                    <p><a href="https://github.com/gabaloho/ethical-hacking-ubec" target="_blank">View on GitHub</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">security</i> ISC2 CC Training</div>
-                <div class="collapsible-body">
-                    <p>Conducted a six-week ISC2 Certified in Cybersecurity (CC) training, preparing 30 students for cybersecurity certification.</p>
-                    <p><strong>Role:</strong> Lead Cybersecurity Instructor</p>
-                    <p><a href="https://github.com/gabaloho/isc2-cc-training" target="_blank">View on GitHub</a></p>
-                </div>
-            </li>
-            <!-- Software Development Projects -->
-            <li>
-                <div class="collapsible-header"><i class="material-icons">code</i> eloheemsuites.com</div>
-                <div class="collapsible-body">
-                    <p>Full-scale development, security, hosting, and continuous monitoring. Ongoing project.</p>
-                    <p><strong>Role:</strong> Lead Engineer</p>
-                    <p><a href="https://eloheemsuites.com" target="_blank">View Project</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">code</i> thebig.com.ng</div>
-                <div class="collapsible-body">
-                    <p>Custom-built website with enterprise-grade security and monitoring solutions. Ongoing project.</p>
-                    <p><strong>Role:</strong> Lead Engineer</p>
-                    <p><a href="https://thebig.com.ng" target="_blank">View Project</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">code</i> HOREMOW Europe and North America Platforms</div>
-                <div class="collapsible-body">
-                    <p>Delivered WordPress overhauls and performance optimizations. Managed continuous platform support until 2024.</p>
-                    <p><strong>Role:</strong> Lead Engineer</p>
+                    <p><strong>Purpose:</strong> An educational platform designed to provide users with the skills needed for a post-COVID workplace.</p>
+                    <p><strong>Situation:</strong> Addressed the growing demand for remote learning solutions and job-ready skills during the COVID-19 pandemic.</p>
+                    <p><strong>Task:</strong> Develop a responsive and engaging platform to showcase a pool of professional development courses.</p>
+                    <p><strong>Action:</strong> Built the platform using <em>HTML</em>, <em>CSS</em>, and <em>JavaScript</em>, focusing on responsive design and interactivity.</p>
+                    <p><strong>Result:</strong> Created a fully functional platform with modern UI/UX principles, deployed on GitHub Pages, and showcased it as a demo for educational innovation.</p>
+                    <p><strong>Reflect:</strong> Learned how to structure projects for real-world applications and gained practical experience in front-end development and GitHub hosting.</p>
                     <p>
-                        <a href="https://www.horemoweurope.org" target="_blank">View HOREMOW Europe</a> | 
-                        <a href="https://www.horemowna.org" target="_blank">View HOREMOW North America</a>
+                        <strong>Skills Demonstrated:</strong>
+                        <span class="chip">HTML</span>
+                        <span class="chip">CSS</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">Responsive Web Design</span>
+                        <span class="chip">UI/UX Design</span>
+                        <span class="chip">GitHub Pages</span>
+                        <span class="chip">Version Control</span>
                     </p>
+                    <p><a href="https://github.com/gabrielaloho/gabrielaloho-wiflix" target="_blank">View Repository on GitHub</a></p>
+                    <p><a href="https://gabrielaloho.github.io/gabrielaloho-wiflix" target="_blank">View Live Demo</a></p>
                 </div>
             </li>
-            <!-- Web Development & Hosting Projects -->
+
+            <!-- AboutMe Project -->
             <li>
-                <div class="collapsible-header"><i class="material-icons">web</i> eco.com.ng</div>
+                <div class="collapsible-header">
+                    <i class="material-icons">smartphone</i> AboutMe: Android Development for Students
+                </div>
                 <div class="collapsible-body">
-                    <p>Secure platform development, with monitoring and continuous maintenance. Ongoing project.</p>
-                    <p><strong>Role:</strong> Lead Engineer & Cybersecurity Consultant</p>
-                    <p><a href="https://eco.com.ng" target="_blank">View Project</a></p>
+                    <p><strong>Purpose:</strong> Teach senior secondary school students the basics of Android app development using Kotlin.</p>
+                    <p><strong>Situation:</strong> Contracted by New Horizons Computer Learning Centers to deliver practical Android development lessons to high school students.</p>
+                    <p><strong>Task:</strong> Create a simple biography app to demonstrate key Android development concepts, which students could replicate and customize.</p>
+                    <p><strong>Action:</strong> 
+                        - Developed an app using <em>Kotlin</em> with a splash screen, <em>ScrollView</em>, <em>LinearLayout</em>, and basic <em>ImageView</em> and <em>TextView</em>.  
+                        - Focused on simplicity to align with students' skill levels.  
+                        - Guided students to follow step-by-step development processes and create personalized versions of the app.
+                    </p>
+                    <p><strong>Result:</strong> Students successfully built and customized their own apps, gaining foundational knowledge in Android development.</p>
+                    <p><strong>Reflect:</strong> Strengthened skills in instructional delivery and adapting complex concepts for beginners.</p>
+                    <p>
+                        <strong>Skills Demonstrated:</strong>
+                        <span class="chip">Kotlin</span>
+                        <span class="chip">Android App Development</span>
+                        <span class="chip">UI/UX Design</span>
+                        <span class="chip">Teaching and Mentorship</span>
+                        <span class="chip">Version Control</span>
+                    </p>
+                    <p><a href="https://github.com/gabrielaloho/AboutMe" target="_blank">View Repository on GitHub</a></p>
                 </div>
             </li>
+
+            <!-- Seedbuilders Android Internship -->
             <li>
-                <div class="collapsible-header"><i class="material-icons">web</i> eyahshotel.com</div>
+                <div class="collapsible-header">
+                    <i class="material-icons">business</i> Seedbuilders Android Internship
+                </div>
                 <div class="collapsible-body">
-                    <p>Developed and hosted a secure platform with ongoing updates and user training. Ongoing project.</p>
-                    <p><strong>Role:</strong> Lead Engineer</p>
-                    <p><a href="https://eyahshotel.com" target="_blank">View Project</a></p>
+                    <p><strong>Purpose:</strong> Create a mobile application to display the organization's website and provide information about its services.</p>
+                    <p><strong>Situation:</strong> Internship with Seedbuilders Nigeria, where I was tasked with developing an app to enhance their digital presence.</p>
+                    <p><strong>Task:</strong> Build a simple, user-friendly Android application using Java to showcase the organization’s offerings.</p>
+                    <p><strong>Action:</strong> 
+                        - Utilized <em>Java</em> for Android development to design a lightweight app with web content integration.  
+                        - Focused on clean UI implementation and seamless navigation.  
+                        - Ensured functionality was aligned with the company’s branding and user experience expectations.
+                    </p>
+                    <p><strong>Result:</strong> Successfully delivered the app, improving the organization's accessibility and visibility to potential clients.</p>
+                    <p><strong>Reflect:</strong> Strengthened practical experience in Android development and learned to align technical projects with business goals.</p>
+                    <p>
+                        <strong>Skills Demonstrated:</strong>
+                        <span class="chip">Java</span>
+                        <span class="chip">Android Development</span>
+                        <span class="chip">UI/UX Design</span>
+                        <span class="chip">Internship Experience</span>
+                    </p>
+                    <p><a href="https://github.com/gabrielaloho/SeedbuildersAndroidIntenship" target="_blank">View Repository on GitHub</a></p>
                 </div>
             </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">web</i> shadebuy.com</div>
-                <div class="collapsible-body">
-                    <p>Designed and hosted an e-commerce website with basic security and monitoring. Discontinued in 2024.</p>
-                    <p><strong>Role:</strong> Lead Engineer & Cybersecurity Consultant</p>
-                    <p><a href="https://shadebuy.com" target="_blank">View Project</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">web</i> voiceofpraiseone.com</div>
-                <div class="collapsible-body">
-                    <p>Developed and hosted a platform with domain and security configurations. Discontinued in 2024.</p>
-                    <p><strong>Role:</strong> Lead Engineer</p>
-                    <p><a href="https://voiceofpraiseone.com" target="_blank">View Project</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">web</i> Seed Builders Foundation</div>
-                <div class="collapsible-body">
-                    <p>Consulted on WordPress setup and backend configuration. Handover to IT team in 2021.</p>
-                    <p><strong>Role:</strong> Consultant</p>
-                    <p><a href="https://seedbuildersfoundation.org" target="_blank">View Project</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">web</i> Seed Builders NG</div>
-                <div class="collapsible-body">
-                    <p>Handled backend configurations and hosting. Handover to IT team in 2021.</p>
-                    <p><strong>Role:</strong> Consultant</p>
-                    <p><a href="https://seedbuildersng.com" target="_blank">View Project</a></p>
-                </div>
-            </li>
+            <!-- Decagon & UK TechHub Developer Placement Assessment -->
+<li>
+    <div class="collapsible-header">
+        <i class="material-icons">assessment</i> Decagon & UK TechHub Developer Placement Assessment
+    </div>
+    <div class="collapsible-body">
+        <p><strong>Purpose:</strong> Assessment project for securing a developer internship placement at Decagon and UK TechHub.</p>
+        <p><strong>Situation:</strong> Participated in a competitive assessment for developer internship roles to demonstrate technical proficiency.</p>
+        <p><strong>Task:</strong> Create a Java-based project utilizing API integration and networking concepts.</p>
+        <p><strong>Action:</strong>
+            - Developed the application in <em>Java</em>, employing Retrofit for API calls to fetch and display data.  
+            - Followed best practices for clean code and reusable components.  
+        </p>
+        <p><strong>Result:</strong> While the project did not secure the placement, it strengthened skills in API integration and showcased the ability to meet project requirements under a tight deadline.</p>
+        <p><strong>Reflect:</strong> Gained valuable experience in building applications under evaluation scenarios and learned the importance of performance optimization and clarity in code.</p>
+        <p>
+            <strong>Skills Demonstrated:</strong>
+            <span class="chip">Java</span>
+            <span class="chip">API Integration</span>
+            <span class="chip">Retrofit</span>
+            <span class="chip">Networking</span>
+            <span class="chip">Internship Assessment</span>
+        </p>
+        <p><a href="https://github.com/gabrielaloho/GabrielAlohoDevPlacement2020" target="_blank">View Repository on GitHub</a></p>
+    </div>
+</li>
+<!-- AboutMe Beginner Project (DroidCamp 2020) -->
+<li>
+    <div class="collapsible-header">
+        <i class="material-icons">person</i> AboutMe Beginner Project (DroidCamp 2020)
+    </div>
+    <div class="collapsible-body">
+        <p><strong>Purpose:</strong> Introduce yourself through a multi-activity Android application built during the DroidCamp 2020.</p>
+        <p><strong>Situation:</strong> Participated in the DroidCamp 2020 to strengthen Android development skills and network with other developers.</p>
+        <p><strong>Task:</strong> Build a beginner-level multi-activity Android application for personal introduction.</p>
+        <p><strong>Action:</strong>
+            - Developed the project primarily in <em>Kotlin</em>, with some minor use of <em>Java</em>.  
+            - Implemented navigation between activities and a clean user interface suitable for beginners.  
+        </p>
+        <p><strong>Result:</strong> Completed the project successfully, demonstrating foundational Android development skills and gaining practical experience in multi-activity project structures.</p>
+        <p><strong>Reflect:</strong> Gained insights into Kotlin's advantages for Android development and improved understanding of activity lifecycle management.</p>
+        <p>
+            <strong>Skills Demonstrated:</strong>
+            <span class="chip">Kotlin</span>
+            <span class="chip">Java</span>
+            <span class="chip">Android Development</span>
+            <span class="chip">Multi-Activity Projects</span>
+        </p>
+        <p><a href="https://github.com/gabrielaloho/aboutme_beginner" target="_blank">View Repository on GitHub</a></p>
+    </div>
+</li>
+<!-- Software Development Projects -->
+<li>
+    <div class="collapsible-header"><i class="material-icons">code</i> eloheemsuites.com</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> Eloheem Suites required a secure and reliable web platform for their business operations.</p>
+        <p><strong>Task:</strong> Develop, secure, host, and continuously monitor the website.</p>
+        <p><strong>Action:</strong> Built the platform from scratch, implemented security protocols, and provided ongoing maintenance.</p>
+        <p><strong>Result:</strong> Delivered a stable and secure website that supports business growth.</p>
+        <p><strong>Reflect:</strong> Emphasized the importance of proactive maintenance for long-term success.</p>
+        <p><a href="https://eloheemsuites.com" target="_blank">View Project</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Web Development</span>
+            <span class="chip">Security</span>
+            <span class="chip">Project Management</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">code</i> thebig.com.ng</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> TheBig required a custom-built website with robust security features.</p>
+        <p><strong>Task:</strong> Design and develop a secure website with monitoring solutions.</p>
+        <p><strong>Action:</strong> Delivered a customized website and implemented enterprise-grade security measures.</p>
+        <p><strong>Result:</strong> Successfully launched a secure platform, meeting client expectations.</p>
+        <p><strong>Reflect:</strong> Gained deeper insights into client-focused development processes.</p>
+        <p><a href="https://thebig.com.ng" target="_blank">View Project</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Web Development</span>
+            <span class="chip">Security</span>
+            <span class="chip">Client Communication</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">code</i> HOREMOW Europe and North America Platforms</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> HOREMOW required optimized platforms for European and North American audiences.</p>
+        <p><strong>Task:</strong> Overhaul WordPress sites and ensure high performance and reliability.</p>
+        <p><strong>Action:</strong> Redesigned the platforms, optimized performance, and provided ongoing support until 2024.</p>
+        <p><strong>Result:</strong> Delivered user-friendly and high-performing websites for both regions.</p>
+        <p><strong>Reflect:</strong> Highlighted the value of consistent communication with stakeholders.</p>
+        <p><a href="https://www.horemoweurope.org" target="_blank">View HOREMOW Europe</a> | 
+        <a href="https://www.horemowna.org" target="_blank">View HOREMOW North America</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">WordPress Development</span>
+            <span class="chip">Website Optimization</span>
+            <span class="chip">Internationalization</span>
+        </p>
+    </div>
+</li>
+
+<!-- Web Development & Hosting Projects -->
+<li>
+    <div class="collapsible-header"><i class="material-icons">web</i> eco.com.ng</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> eco.com.ng required a secure platform for its online presence.</p>
+        <p><strong>Task:</strong> Develop a platform with robust security and continuous maintenance.</p>
+        <p><strong>Action:</strong> Built the website, implemented monitoring systems, and provided ongoing support.</p>
+        <p><strong>Result:</strong> Successfully launched and maintained a secure platform.</p>
+        <p><strong>Reflect:</strong> Reinforced the importance of integrating security at every development stage.</p>
+        <p><a href="https://eco.com.ng" target="_blank">View Project</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Web Development</span>
+            <span class="chip">Security</span>
+            <span class="chip">Maintenance</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">web</i> eyahshotel.com</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> Eyahshotel needed a secure and user-friendly website.</p>
+        <p><strong>Task:</strong> Develop and host a secure platform with user training support.</p>
+        <p><strong>Action:</strong> Created the platform, configured domains, and provided training for staff.</p>
+        <p><strong>Result:</strong> Delivered a functional and secure website with ongoing updates.</p>
+        <p><strong>Reflect:</strong> Emphasized the role of user education in platform sustainability.</p>
+        <p><a href="https://eyahshotel.com" target="_blank">View Project</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Web Development</span>
+            <span class="chip">User Training</span>
+            <span class="chip">Security</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">web</i> shadebuy.com</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> ShadeBuy required an e-commerce platform with basic security features.</p>
+        <p><strong>Task:</strong> Design and host the website with monitoring capabilities.</p>
+        <p><strong>Action:</strong> Developed and hosted the platform, ensuring security and functionality.</p>
+        <p><strong>Result:</strong> Launched the e-commerce site, which was later discontinued in 2024.</p>
+        <p><strong>Reflect:</strong> Learned about the challenges of maintaining e-commerce platforms long-term.</p>
+        <p><a href="https://shadebuy.com" target="_blank">View Project</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">E-Commerce Development</span>
+            <span class="chip">Web Security</span>
+            <span class="chip">Platform Maintenance</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">web</i> voiceofpraiseone.com</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> Voice of Praise required a platform to manage their online presence.</p>
+        <p><strong>Task:</strong> Develop and host the website with domain and security configurations.</p>
+        <p><strong>Action:</strong> Delivered a functional website and provided maintenance services.</p>
+        <p><strong>Result:</strong> Improved online visibility for the organization, discontinued in 2024.</p>
+        <p><strong>Reflect:</strong> Recognized the need for adaptable solutions to meet changing organizational goals.</p>
+        <p><a href="https://voiceofpraiseone.com" target="_blank">View Project</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Web Development</span>
+            <span class="chip">Security</span>
+            <span class="chip">Maintenance</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">web</i> Seed Builders Foundation</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> Seed Builders Foundation required assistance with WordPress setup and backend configuration.</p>
+        <p><strong>Task:</strong> Consult on WordPress setup and provide technical backend configurations.</p>
+        <p><strong>Action:</strong> Provided guidance and completed initial configurations, ensuring a smooth handover.</p>
+        <p><strong>Result:</strong> Successfully handed over to the IT team in 2021, ensuring long-term operational capability.</p>
+        <p><strong>Reflect:</strong> Highlighted the benefits of empowering internal teams for sustained success.</p>
+        <p><a href="https://seedbuildersfoundation.org" target="_blank">View Project</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">WordPress Setup</span>
+            <span class="chip">Backend Configuration</span>
+            <span class="chip">Technical Consulting</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">web</i> Seed Builders NG</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> Seed Builders NG required backend configurations and hosting services.</p>
+        <p><strong>Task:</strong> Handle backend configurations and hosting responsibilities.</p>
+        <p><strong>Action:</strong> Completed the necessary configurations and ensured a smooth transition to the IT team.</p>
+        <p><strong>Result:</strong> Successfully handed over in 2021, maintaining operational stability.</p>
+        <p><strong>Reflect:</strong> Recognized the importance of clear documentation and knowledge transfer for seamless transitions.</p>
+        <p><a href="https://seedbuildersng.com" target="_blank">View Project</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Backend Configuration</span>
+            <span class="chip">Hosting</span>
+            <span class="chip">Knowledge Transfer</span>
+        </p>
+    </div>
+</li>
+<!-- Cybersecurity Projects -->
+<li>
+    <div class="collapsible-header"><i class="material-icons">security</i> Nigerian Police Workshops</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> The Nigerian Police needed advanced training in digital forensics and cybersecurity to improve investigation capabilities.</p>
+        <p><strong>Task:</strong> Conduct workshops focusing on tools and strategies for digital investigations.</p>
+        <p><strong>Action:</strong> Designed and delivered comprehensive training sessions, demonstrating tools and real-world scenarios.</p>
+        <p><strong>Result:</strong> Enhanced the digital investigation skills of over 50 officers, leading to improved case resolutions.</p>
+        <p><strong>Reflect:</strong> Learned the importance of tailoring training to the audience's technical level.</p>
+        <p><a href="nigerian-police-workshops.pdf" class="btn" download>Download Training Slides</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Cybersecurity</span>
+            <span class="chip">Digital Forensics</span>
+            <span class="chip">Training & Development</span>
+            <span class="chip">Public Sector Engagement</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">security</i> Ethical Hacking for UBEC</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> UBEC staff required training in ethical hacking to strengthen their cybersecurity posture.</p>
+        <p><strong>Task:</strong> Deliver hands-on ethical hacking and penetration testing training sessions.</p>
+        <p><strong>Action:</strong> Developed a curriculum and provided interactive training using real-world examples.</p>
+        <p><strong>Result:</strong> Improved staff awareness and skills in identifying and mitigating cyber threats.</p>
+        <p><strong>Reflect:</strong> Gained insights into the importance of practical, scenario-based learning.</p>
+        <p><a href="ethical-hacking-ubec.pdf" class="btn" download>Download Training Slides</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Ethical Hacking</span>
+            <span class="chip">Penetration Testing</span>
+            <span class="chip">Cybersecurity Awareness</span>
+            <span class="chip">Training & Development</span>
+        </p>
+    </div>
+</li>
+
+<li>
+    <div class="collapsible-header"><i class="material-icons">security</i> ISC2 CC Training</div>
+    <div class="collapsible-body">
+        <p><strong>Situation:</strong> Aspiring cybersecurity professionals needed structured training to pass the ISC2 Certified in Cybersecurity exam.</p>
+        <p><strong>Task:</strong> Conduct a six-week training program covering key topics for the certification.</p>
+        <p><strong>Action:</strong> Created a detailed course outline and delivered weekly sessions with hands-on labs.</p>
+        <p><strong>Result:</strong> Prepared 30 students for the ISC2 CC certification, boosting their career prospects.</p>
+        <p><strong>Reflect:</strong> Enhanced my ability to break down complex topics for diverse audiences.</p>
+        <p><a href="isc2-cc-training.pdf" class="btn" download>Download Training Slides</a></p>
+        <p><strong>Skills Demonstrated:</strong>
+            <span class="chip">Cybersecurity Certification</span>
+            <span class="chip">Course Design</span>
+            <span class="chip">Hands-On Labs</span>
+            <span class="chip">Training & Mentorship</span>
+        </p>
+    </div>
+</li>
+
+
         </ul>
     </div>
 </div>
+
 
 <!-- Certifications Section -->
 <section id="certifications" class="section grey lighten-4">
@@ -309,32 +885,100 @@
         <h2 class="purple-text text-darken-4">
             <span class="material-icons left">verified_user</span> Certifications & Courses
         </h2>
-
         <!-- Certifications Card -->
-        <div class="card">
+        <div class="card hoverable">
             <div class="card-content">
-                <ul class="collection">
-                    <li class="collection-item"><strong>Certified Ethical Hacker (CEH) Practical - </strong>EC-Council</li>
-                    <li class="collection-item"><strong>Introduction to Ethical Hacking - </strong>Codecademy</li>
-                    <li class="collection-item"><strong>Programming Foundations: Web Security - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Learning Computer Security and Internet Safety - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Introduction to Linux - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Linux: Overview and Installation - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Programming Foundations: Algorithms - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Programming Foundations: Design Patterns - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Introduction to Python: Master Python Basics - </strong>BitDegree</li>
-                    <li class="collection-item"><strong>Computer Programming for Everyone - </strong>FutureLearn</li>
-                    <li class="collection-item"><strong>Learn to Code for the Web - </strong>University of Leeds</li>
-                    <li class="collection-item"><strong>Frontend Fundamentals - </strong>Pirple</li>
-                    <li class="collection-item"><strong>Getting Your First Job in Software Development - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Programming Foundations: Fundamentals - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Programming Foundations: Beyond the Fundamentals - </strong>LinkedIn</li>
-                    <li class="collection-item"><strong>Programming Foundations: Object-Oriented Design - </strong>LinkedIn</li>
+                <ul class="collection with-header">
+                    <!-- Highlighted and Relevant Certifications -->
+                    <li class="collection-item">
+                        <strong>Certified Ethical Hacker (CEH) Practical</strong> - EC-Council
+                        <br>
+                        <em>Issued: 29 November 2022</em>
+                        <br>
+                        <em>Valid until: 28 November 2025</em>
+                        <br>
+                        <em>Description:</em> Awarded the "Certified Ethical Hacker (Practical)" certification for completing rigorous challenges within the stipulated time. Validates practical knowledge in identifying and addressing cybersecurity vulnerabilities using ethical hacking techniques.
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>Diploma in Cyber Security</strong> - Oxford Home Study Centre
+                        <br>
+                        <em>Completed: 03 November 2022, Certificate # CPDSO1626, CPD Hours: 60</em>
+                        <br>
+                        <em>Description:</em> Successfully completed the Diploma in Cyber Security, covering topics such as cybersecurity, malware analysis, tools & techniques, forensics, policies, and risk management. Earned 60 CPD hours.
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>Frontend Fundamentals</strong> - Pirple
+                        <br>
+                        <em>Issued: 20 May 2020, Does not expire; Learned HTML5 and CSS3</em>
+                        <br>
+                        <em>Description:</em> Completed a comprehensive course covering HTML5 and CSS3, gaining hands-on experience in web design, structure, and responsive web development.
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>Learn Bash Scripting Course</strong> - Codecademy
+                        <br>
+                        <em>Completed: 29 October 2022, Certificate ID: C7CA1176-8</em>
+                        <br>
+                        <em>Description:</em> Gained proficiency in Bash scripting for automating tasks and system management in Linux-based environments. 
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>Introduction to Ethical Hacking Course</strong> - Codecademy
+                        <br>
+                        <em>Completed: 28 October 2022, Certificate ID: 3BC5A600-4</em>
+                        <br>
+                        <em>Description:</em> Gained foundational knowledge in ethical hacking, penetration testing, and vulnerability management.
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>Collaborative Working in a Remote Team</strong> - University of Leeds and Institute of Coding
+                        <br>
+                        <em>Issued: 21st April 2020</em>
+                        <br>
+                        <em>Description:</em> Explored challenges and tools for effective remote team collaboration, including project management tools and best practices for virtual work environments.
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>Computer Programming for Everyone</strong> - University of Leeds and Institute of Coding
+                        <br>
+                        <em>Issued: 27th April 2020, Score: 86%</em>
+                        <br>
+                        <em>Description:</em> Learned programming fundamentals and coding principles, applied in a hands-on project to solve problems.
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>Learn to Code for the Web</strong> - University of Leeds and Institute of Coding
+                        <br>
+                        <em>Issued: 1st May 2020, Score: 73%</em>
+                        <br>
+                        <em>Description:</em> Gained introductory skills in HTML, CSS, and JavaScript for web page creation and styling.
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>Learn About Current Digital Workplace Trends</strong> - University of Leeds and Institute of Coding
+                        <br>
+                        <em>Issued: 21st April 2020, Score: 80%</em>
+                        <br>
+                        <em>Description:</em> Explored trends in the digital workplace, focusing on the digital revolution and the importance of data and digital skills.
+                    </li>
+
+                    <li class="collection-item">
+                        <strong>IT Project Management</strong> - Unicaf University
+                        <br>
+                        <em>Completed: 10 July 2023</em>
+                        <br>
+                        <em>Description:</em> Acquired knowledge of IT project management, including planning, risk management, and resource allocation techniques.
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
+
+
+
 
 
   <!-- Contact Section -->
@@ -369,7 +1013,7 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn waves-effect waves-light purple darken-4">Send Message</button>
+            <button type="submit" class="btn waves-effect waves-light">Send Message</button>
           </div>
         </div>
       </form>
@@ -381,7 +1025,7 @@
 
 
 <!-- Footer -->
-<footer class="page-footer purple darken-4">
+<footer class="page-footer">
     <div class="container">
         <div class="row">
             <!-- Links Section -->
@@ -448,6 +1092,13 @@
       }
     });
   </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+</script>
+
 
 
 </body>
